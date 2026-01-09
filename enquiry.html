@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Enquiry | GlobifyTrade</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* ===== PAGE BACKGROUND ===== */
+body{
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:#fff;
+font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== AFFILIATE COLUMNS ===== */
+.affiliate-box{
+background: linear-gradient(135deg,#ff512f,#dd2476);
+border-radius:20px;
+padding:40px 20px;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+cursor:pointer;
+transition: all 0.4s ease;
+box-shadow:0 15px 30px rgba(0,0,0,0.3);
+}
+
+.affiliate-box:hover{
+transform: translateY(-10px) scale(1.05);
+background: linear-gradient(135deg,#24c6dc,#514a9d);
+}
+
+.affiliate-box h4{
+font-weight:700;
+}
+@media (min-width: 768px){
+  .col-md-3.d-flex {
+    min-height: 100%;
+  }
+}
+
+
+/* ===== FORM CARD ===== */
+.enquiry-card{
+background: rgba(255,255,255,0.12);
+backdrop-filter: blur(12px);
+border-radius:25px;
+padding:40px;
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+transition:0.4s;
+}
+
+.enquiry-card:hover{
+transform: translateY(-8px);
+}
+
+/* ===== FORM INPUTS ===== */
+.form-control, select{
+border-radius:30px;
+padding:12px 18px;
+border:none;
+transition:0.3s;
+}
+
+.form-control:focus, select:focus{
+box-shadow:0 0 15px #00ffd5;
+transform: scale(1.02);
+}
+
+/* ===== BUTTON ===== */
+.btn-submit{
+background: linear-gradient(135deg,#00c6ff,#0072ff);
+border:none;
+border-radius:30px;
+padding:14px;
+font-size:18px;
+font-weight:600;
+transition:0.4s;
+}
+
+.btn-submit:hover{
+background: linear-gradient(135deg,#f7971e,#ffd200);
+transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer{
+background:#000;
+color:#aaa;
+padding:25px 0;
+margin-top:80px;
+}
+
+footer a{
+color:#00c6ff;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">GlobifyTrade</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+<li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container mt-5 pt-5">
+<h2 class="text-center fw-bold mb-5">Product Enquiry</h2>
+
+<div class="row g-4 align-items-stretch">
+
+<div class="col-md-3 d-flex flex-column gap-3">
+  <a href="https://example.com/packaging" target="_blank" class="text-decoration-none text-white flex-fill">
+    <div class="affiliate-box h-100">
+      <h4>📦 Packaging Supplier</h4>
+    </div>
+  </a>
+
+  <a href="https://example.com/labeling" target="_blank" class="text-decoration-none text-white flex-fill">
+    <div class="affiliate-box h-100">
+      <h4>🏷️ Label Printing</h4>
+    </div>
+  </a>
+
+  <a href="https://example.com/certification" target="_blank" class="text-decoration-none text-white flex-fill">
+    <div class="affiliate-box h-100">
+      <h4>📜 Export Certification</h4>
+    </div>
+  </a>
+
+  <a href="https://example.com/payment" target="_blank" class="text-decoration-none text-white flex-fill">
+    <div class="affiliate-box h-100">
+      <h4>💳 International Payments</h4>
+    </div>
+  </a>
+</div>
+
+
+<!-- CENTER FORM -->
+<div class="col-md-6">
+<div class="enquiry-card">
+<form class="row g-3">
+
+<input class="form-control" placeholder="Your Name" required>
+<input class="form-control" placeholder="Email ID" required>
+<input class="form-control" placeholder="Company Name" required>
+<input class="form-control" placeholder="Mobile No / WhatsApp" required>
+
+<select class="form-control" required>
+<option value="">Container Type</option>
+<option>20 Feet</option>
+<option>40 Feet</option>
+</select>
+
+<input class="form-control" placeholder="Destination Port" required>
+<!-- PRODUCT DETAILS -->
+<select class="form-control" required>
+<option value="">Product Category</option>
+<option>Food & Agro</option>
+<option>Beverages</option>
+<option>Spices</option>
+<option>Textiles</option>
+<option>Others</option>
+</select>
+
+<input class="form-control" placeholder="Product Name (e.g. Basmati Rice)" required>
+
+<select class="form-control" required>
+<option value="">Order Type</option>
+<option>Sample Order</option>
+<option>Trial Order</option>
+<option>Bulk Order</option>
+</select>
+
+<!-- TRADE TERMS -->
+<select class="form-control" required>
+<option value="">Incoterms</option>
+<option>EXW</option>
+<option>FOB</option>
+<option>CIF</option>
+<option>CFR</option>
+</select>
+
+<!-- PRICE -->
+<input class="form-control" placeholder="Target Price per Unit (USD / INR)">
+
+<!-- PACKAGING -->
+<select class="form-control" required>
+<option value="">Packaging Type</option>
+<option>Box Packing</option>
+<option>Bag Packing</option>
+<option>Drum Packing</option>
+<option>Palletized</option>
+</select>
+
+<select class="form-control">
+<option value="">Labeling</option>
+<option>Private Label Required</option>
+<option>Neutral Packing</option>
+</select>
+
+<!-- PAYMENT -->
+<select class="form-control" required>
+<option value="">Payment Terms</option>
+<option>100% Advance</option>
+<option>70% Advance 30% LC</option>
+<option>70% Advance 30% Before BL</option>
+<option>DP / DA</option>
+</select>
+
+<!-- CERTIFICATION -->
+<select class="form-control">
+<option value="">Certification Required</option>
+<option>FSSAI</option>
+<option>APEDA</option>
+<option>ISO</option>
+<option>HALAL</option>
+<option>None</option>
+</select>
+
+<!-- DELIVERY -->
+<select class="form-control">
+<option value="">Delivery Timeline</option>
+<option>Immediate</option>
+<option>Within 15 Days</option>
+<option>Within 30 Days</option>
+<option>Flexible</option>
+</select>
+
+<!-- BUYER TYPE -->
+<select class="form-control">
+<option value="">Buyer Type</option>
+<option>Importer</option>
+<option>Distributor</option>
+<option>Wholesaler</option>
+<option>Retail Chain</option>
+</select>
+
+<!-- MESSAGE -->
+<textarea class="form-control" rows="3" placeholder="Special Requirements / Message"></textarea>
+<button class="btn btn-submit w-100 mt-3">Submit Enquiry</button>
+
+</form>
+</div>
+</div>
+
+<div class="col-md-3 d-flex flex-column gap-3">
+  <a href="https://example.com/logistics" target="_blank" class="text-decoration-none text-white flex-fill">
+    <div class="affiliate-box h-100">
+      <h4>🌍 Logistics Partner</h4>
+    </div>
+  </a>
+
+  <a href="https://example.com/freight" target="_blank" class="text-decoration-none text-white flex-fill">
+    <div class="affiliate-box h-100">
+      <h4>🚢 Freight Forwarder</h4>
+    </div>
+  </a>
+
+  <a href="https://example.com/customs" target="_blank" class="text-decoration-none text-white flex-fill">
+    <div class="affiliate-box h-100">
+      <h4>🛃 Customs Clearance</h4>
+    </div>
+  </a>
+
+  <a href="https://example.com/insurance" target="_blank" class="text-decoration-none text-white flex-fill">
+    <div class="affiliate-box h-100">
+      <h4>🛡️ Cargo Insurance</h4>
+    </div>
+  </a>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="text-center">
+<div class="container">
+<p class="mb-1">© 2026 <strong>GlobifyTrade International</strong></p>
+<p class="mb-0">
+<a href="#">Privacy Policy</a> | 
+<a href="#">Terms & Conditions</a>
+</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

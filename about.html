@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us | GlobifyTrade</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* ===== ANIMATED BACKGROUND ===== */
+body{
+background: linear-gradient(-45deg,#1d2671,#c33764,#0f2027,#2c5364);
+background-size:400% 400%;
+animation:bgAnim 12s ease infinite;
+color:#fff;
+font-family:'Segoe UI',sans-serif;
+}
+@keyframes bgAnim{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+/* ===== BOX STYLES ===== */
+.content-box{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+border-radius:22px;
+padding:30px;
+box-shadow:0 25px 45px rgba(0,0,0,0.4);
+transition:0.4s;
+height:100%;
+}
+.content-box:hover{
+transform:translateY(-10px);
+}
+
+.media-box{
+background:#000;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+transition:0.4s;
+height:100%;
+}
+.media-box:hover{
+transform:scale(1.05);
+}
+/* ===== HOVER IMAGE CHANGE ===== */
+.image-hover-box{
+position: relative;
+overflow: hidden;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+transition:0.4s;
+}
+
+.image-hover-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.5s ease;
+}
+
+.image-hover-box .hover-img{
+position:absolute;
+top:0;
+left:0;
+opacity:0;
+}
+
+.image-hover-box:hover .hover-img{
+opacity:1;
+}
+
+.image-hover-box:hover{
+transform:scale(1.05);
+}
+
+
+/* ===== FOOTER ===== */
+footer{
+background:#000;
+color:#aaa;
+padding:25px 0;
+margin-top:80px;
+}
+footer a{color:#00c6ff;text-decoration:none;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html">GlobifyTrade</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+<li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container mt-5 pt-5">
+<h1 class="text-center fw-bold mb-5">About Us</h1>
+
+<!-- FOUNDER + ABOUT -->
+<div class="row g-4 align-items-stretch mb-5">
+
+<div class="col-md-5">
+<div class="media-box">
+<img src="images/founder.jpg" class="img-fluid w-100% h-100" alt="Founder">
+</div>
+</div>
+
+<div class="col-md-7">
+<div class="content-box">
+<h3>Founder – Monalisa Prusty</h3>
+<p>
+Monalisa Prusty is a young and dynamic entrepreneur from Pune,
+empowering women in the export industry. She is dedicated, hardworking,
+and passionate about delivering Indian products to global markets.
+</p>
+
+<p>
+<strong>GlobifyTrade International</strong> is an India-based export company committed
+to delivering high-quality products worldwide.
+</p>
+
+<p>
+<strong>Products We Export:</strong><br>
+• Snacks & Namkeen<br>
+• Ready-to-Eat Food<br>
+• Grocery & FMCG Products
+</p>
+
+<p>
+<strong>Countries We Serve:</strong><br>
+• Netherlands • Germany • United Kingdom • France • UAE
+</p>
+
+<p>
+<strong>Packaging & MOQ:</strong><br>
+• Export-standard packaging<br>
+• Private labeling available<br>
+• MOQ as per product & destination
+</p>
+
+<p>
+<strong>Why Work With Us:</strong><br>
+• EU-compliant manufacturers<br>
+• Consistent quality & timely delivery<br>
+• Competitive export pricing
+</p>
+</div>
+</div>
+
+</div>
+
+<!-- MEDIA SECTION -->
+<div class="row g-4">
+
+<div class="col-md-4">
+  <div class="image-hover-box">
+    <img src="images/export1.jpg" alt="Export Image">
+    <img src="images/export1-hover.jpg" class="hover-img" alt="Export Image Hover">
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="image-hover-box">
+    <img src="images/export2.jpg" alt="Export Image">
+    <img src="images/export2-hover.jpg" class="hover-img" alt="Export Image Hover">
+  </div>
+</div>
+
+
+<div class="col-md-4">
+<div class="media-box">
+<video controls class="w-100 h-100">
+<source src="images/export-video.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+<!-- EXPLORE PRODUCTS CTA -->
+<div class="text-center mt-5">
+  <a href="products.html" class="btn btn-lg btn-custom px-5 py-3">
+    Explore Our Products →
+  </a>
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center">
+<div class="container">
+<p class="mb-1">© 2026 <strong>GlobifyTrade International</strong></p>
+<p>
+<a href="#">Privacy Policy</a> | 
+<a href="#">Terms & Conditions</a>
+</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
