@@ -13,27 +13,30 @@
   <p>Redirecting you to WhatsApp...</p>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.location.search);
 
-    const name = params.get("name") || "";
-    const email = params.get("email") || "";
-    const phone = params.get("phone") || "";
-    const message = params.get("message") || "";
+  const name = params.get("name") || "";
+  const email = params.get("email") || "";
+  const phone = params.get("phone") || "";
+  const message = params.get("message") || "";
 
-    const whatsappNumber = "919270840556";
+  const whatsappNumber = "919270840556";
 
-    const text =
-      "New Contact Enquiry:%0A" +
-      "Name: " + name + "%0A" +
-      "Email: " + email + "%0A" +
-      "Phone: " + phone + "%0A" +
-      "Message: " + message;
+  const text =
+    "New Contact Enquiry:\n" +
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Phone: " + phone + "\n" +
+    "Message: " + message;
 
-    setTimeout(() => {
-      window.location.href =
-        "https://wa.me/" + whatsappNumber + "?text=" + text;
-    }, 2000);
+  const encodedText = encodeURIComponent(text);
+
+  setTimeout(() => {
+    window.location.href =
+      "https://wa.me/" + whatsappNumber + "?text=" + encodedText;
+  }, 2000);
   </script>
 
 </body>
 </html>
+
