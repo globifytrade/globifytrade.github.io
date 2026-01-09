@@ -12,22 +12,73 @@
   <p>We have received your enquiry. Our team will get back to you shortly.</p>
   <p>Redirecting you to WhatsApp...</p>
 
-  <script>
+ <script>
   const params = new URLSearchParams(window.location.search);
+  const formType = params.get("form_type");
 
   const name = params.get("name") || "";
+  const company = params.get("company") || "";
   const email = params.get("email") || "";
   const phone = params.get("phone") || "";
   const message = params.get("message") || "";
 
+  // Product fields
+  const product = params.get("product") || "";
+  const productCategory = params.get("product_category") || "";
+  const containerType = params.get("container_type") || "";
+  const orderType = params.get("order_type") || "";
+  const incoterms = params.get("incoterms") || "";
+  const destinationPort = params.get("destination_port") || "";
+  const deliveryTimeline = params.get("delivery_timeline") || "";
+  const targetPrice = params.get("target_price") || "";
+  const packagingType = params.get("packaging_type") || "";
+  const paymentTerms = params.get("payment_terms") || "";
+
   const whatsappNumber = "919270840556";
 
-  const text =
-    "New Contact Enquiry:\n" +
-    "Name: " + name + "\n" +
-    "Email: " + email + "\n" +
-    "Phone: " + phone + "\n" +
-    "Message: " + message;
+  let text = "";
+
+  // CONTACT FORM MESSAGE
+  if (formType === "contact") {
+    text =
+`📩 *New Contact Enquiry – GlobifyTrade*
+
+👤 Name: ${name}
+📧 Email: ${email}
+📞 Phone: ${phone}
+
+📝 Message:
+${message}
+
+✅ We have received your enquiry. Our team will contact you shortly.`;
+  }
+
+  // PRODUCT ENQUIRY MESSAGE
+  else {
+    text =
+`📦 *New Product Enquiry – GlobifyTrade*
+
+👤 Name: ${name}
+🏢 Company: ${company}
+📧 Email: ${email}
+📞 Phone: ${phone}
+
+📦 Product: ${product}
+📂 Category: ${productCategory}
+🚢 Container: ${containerType}
+📑 Order Type: ${orderType}
+
+🌍 Incoterms: ${incoterms}
+📍 Destination: ${destinationPort}
+⏳ Delivery: ${deliveryTimeline}
+
+💰 Target Price: ${targetPrice}
+📦 Packaging: ${packagingType}
+💳 Payment: ${paymentTerms}
+
+📝 Requirements:
+${message}`;
+  }
 
   const encodedText = encodeURIComponent(text);
 
@@ -35,8 +86,9 @@
     window.location.href =
       "https://wa.me/" + whatsappNumber + "?text=" + encodedText;
   }, 2000);
-  </script>
+ </script>
 
 </body>
 </html>
+
 
