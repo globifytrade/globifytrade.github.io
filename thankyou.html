@@ -13,82 +13,54 @@
   <p>Redirecting you to WhatsApp...</p>
 
  <script>
-  const params = new URLSearchParams(window.location.search);
-  const formType = params.get("form_type");
+const params = new URLSearchParams(window.location.search);
+const formType = params.get("form_type");
 
+const whatsappNumber = "919270840556";
+let text = "";
+
+if (formType === "contact") {
+  // CONTACT FORM DATA
   const name = params.get("name") || "";
-  const company = params.get("company") || "";
   const email = params.get("email") || "";
   const phone = params.get("phone") || "";
   const message = params.get("message") || "";
 
-  // Product fields
-  const product = params.get("product") || "";
-  const productCategory = params.get("product_category") || "";
-  const containerType = params.get("container_type") || "";
-  const orderType = params.get("order_type") || "";
-  const incoterms = params.get("incoterms") || "";
-  const destinationPort = params.get("destination_port") || "";
-  const deliveryTimeline = params.get("delivery_timeline") || "";
-  const targetPrice = params.get("target_price") || "";
-  const packagingType = params.get("packaging_type") || "";
-  const paymentTerms = params.get("payment_terms") || "";
+  text =
+    "📩 New Contact Enquiry – GlobifyTrade\n\n" +
+    "👤 Name: " + name + "\n" +
+    "📧 Email: " + email + "\n" +
+    "📞 Phone: " + phone + "\n\n" +
+    "📝 Message:\n" + message;
 
-  const whatsappNumber = "919270840556";
+} else {
+  // PRODUCT ENQUIRY DATA
+  text =
+    "📦 New Product Enquiry – GlobifyTrade\n\n" +
+    "👤 Name: " + (params.get("name") || "") + "\n" +
+    "🏢 Company: " + (params.get("company") || "") + "\n" +
+    "📧 Email: " + (params.get("email") || "") + "\n" +
+    "📞 Phone: " + (params.get("phone") || "") + "\n\n" +
+    "📦 Product: " + (params.get("product") || "") + "\n" +
+    "📂 Category: " + (params.get("category") || "") + "\n" +
+    "🚢 Container: " + (params.get("container") || "") + "\n" +
+    "📑 Order Type: " + (params.get("order_type") || "") + "\n\n" +
+    "🌍 Incoterms: " + (params.get("incoterms") || "") + "\n" +
+    "📍 Destination: " + (params.get("destination") || "") + "\n" +
+    "⏳ Delivery: " + (params.get("delivery") || "") + "\n\n" +
+    "💰 Target Price: " + (params.get("price") || "") + "\n" +
+    "📦 Packaging: " + (params.get("packaging") || "") + "\n" +
+    "💳 Payment: " + (params.get("payment") || "");
+}
 
-  let text = "";
-
-  // CONTACT FORM MESSAGE
-  if (formType === "contact") {
-    text =
-`📩 *New Contact Enquiry – GlobifyTrade*
-
-👤 Name: ${name}
-📧 Email: ${email}
-📞 Phone: ${phone}
-
-📝 Message:
-${message}
-
-✅ We have received your enquiry. Our team will contact you shortly.`;
-  }
-
-  // PRODUCT ENQUIRY MESSAGE
-  else {
-    text =
-`📦 *New Product Enquiry – GlobifyTrade*
-
-👤 Name: ${name}
-🏢 Company: ${company}
-📧 Email: ${email}
-📞 Phone: ${phone}
-
-📦 Product: ${product}
-📂 Category: ${productCategory}
-🚢 Container: ${containerType}
-📑 Order Type: ${orderType}
-
-🌍 Incoterms: ${incoterms}
-📍 Destination: ${destinationPort}
-⏳ Delivery: ${deliveryTimeline}
-
-💰 Target Price: ${targetPrice}
-📦 Packaging: ${packagingType}
-💳 Payment: ${paymentTerms}
-
-📝 Requirements:
-${message}`;
-  }
-
-  const encodedText = encodeURIComponent(text);
-
-  setTimeout(() => {
-    window.location.href =
-      "https://wa.me/" + whatsappNumber + "?text=" + encodedText;
-  }, 2000);
+setTimeout(() => {
+  window.location.href =
+    "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+}, 2000);
  </script>
 
 </body>
 </html>
+
 
 
