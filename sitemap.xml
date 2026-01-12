@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME PAGE -->
+  <url>
+    <loc>https://globifytrade.github.io/</loc>
+  </url>
+
+  <!-- MAIN PAGES -->
+  <url>
+    <loc>https://globifytrade.github.io/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://globifytrade.github.io/products.html</loc>
+  </url>
+
+  <url>
+    <loc>https://globifytrade.github.io/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://globifytrade.github.io/product-enquiry.html</loc>
+  </url>
+
+  <!-- BLOG PAGES -->
+  <url>
+    <loc>https://globifytrade.github.io/blog/</loc>
+  </url>
+
+  <url>
+    <loc>https://globifytrade.github.io/blog/onion-export.html</loc>
+  </url>
+
+  <url>
+    <loc>https://globifytrade.github.io/blog/rice-export.html</loc>
+  </url>
+
+</urlset>
