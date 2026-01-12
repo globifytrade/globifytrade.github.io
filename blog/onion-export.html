@@ -251,10 +251,12 @@ footer{
 
 <header>
   <h1>🧅 Dubai Onion Export Guide</h1>
-  <div class="lang-switch">
-    <button onclick="setLang('mr')">मराठी</button>
-    <button onclick="setLang('en')">English</button>
-  </div>
+  <<div class="lang-switch">
+  <button onclick="setLang('mr')">मराठी</button>
+  <button disabled style="opacity:0.5;cursor:not-allowed;">
+    English (Coming Soon)
+  </button>
+</div>
 </header>
 
 <div class="container">
@@ -453,8 +455,17 @@ loading="lazy">
 
 <script>
 function setLang(lang){
-  document.querySelectorAll('.lang').forEach(el=>el.style.display='none');
-  document.querySelector('.'+lang).style.display='block';
+  const target = document.querySelector('.' + lang);
+
+  if(!target){
+    alert("English version coming soon");
+    return;
+  }
+
+  document.querySelectorAll('.lang')
+    .forEach(el => el.style.display='none');
+
+  target.style.display='block';
 }
 </script>
 
