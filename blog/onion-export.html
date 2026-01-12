@@ -163,6 +163,87 @@ footer{
   }
 
 }
+  /* ✅ GLOBAL RESET (VERY IMPORTANT) */
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+}
+
+/* ✅ HEADER GAP FIX */
+header{
+  margin:0;
+  padding:14px 16px;
+}
+
+/* ✅ FOOTER GAP FIX */
+footer{
+  margin:0;
+  padding:12px 10px;
+}
+
+/* ✅ MOBILE SPECIFIC FIX */
+@media(max-width:768px){
+
+  body{
+    background:#f4f4f4;
+  }
+
+  /* Remove extra gap between header & content */
+  .container{
+    margin:0;
+    padding:8px;
+  }
+
+  .content{
+    margin:0;
+    padding:16px 14px;
+    border-radius:8px;
+  }
+
+  /* Headings margin control */
+  h1{
+    margin-top:10px;
+    margin-bottom:14px;
+    font-size:26px;
+  }
+
+  h2{
+    margin-top:26px;
+    margin-bottom:12px;
+    font-size:22px;
+  }
+
+  h3{
+    margin-top:22px;
+    margin-bottom:10px;
+    font-size:19px;
+  }
+
+  p{
+    margin:10px 0;
+    line-height:1.7;
+    font-size:16px;
+  }
+
+  /* Lists fix */
+  ul, ol{
+    margin:10px 0 10px 0;
+    padding-left:18px;
+  }
+
+  /* Sidebar spacing fix */
+  .sidebar{
+    margin-top:20px;
+    padding:0;
+  }
+
+}
 </style>
 </head>
 
