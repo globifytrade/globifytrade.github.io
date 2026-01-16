@@ -218,7 +218,7 @@ padding-bottom:60px;
 
 footer.footer{
 margin:0;
-padding-bottom:20px;
+padding-bottom:0px;
 }
 
 /* ===== FOOTER HARD FIX ===== */
@@ -227,7 +227,7 @@ position:relative;
 bottom:0;
 width:100%;
 margin:0 !important;
-padding-bottom:15px;
+padding-bottom:0px;
 }
 
 /* BODY OVERFLOW FIX */
@@ -252,27 +252,6 @@ padding-bottom:10px;
 }
 .whatsapp-float{
 bottom:25px;
-}
-/* ===== FINAL WHITE SPACE KILL (GUARANTEED) ===== */
-
-/* html background white असतो – तोच दिसतोय */
-html {
-background: #111;
-}
-
-/* body full viewport cover करेल */
-body {
-min-height: 100svh; /* mobile-safe viewport */
-background: #111;
-margin: 0;
-padding: 0;
-}
-
-/* footer exact end */
-footer.footer {
-background: #111;
-margin: 0;
-padding-bottom: calc(20px + env(safe-area-inset-bottom));
 }
 </style>
 </head>
@@ -474,6 +453,7 @@ compliance-driven international trade.
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
