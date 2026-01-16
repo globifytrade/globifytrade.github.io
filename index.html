@@ -1,318 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
 
+<!-- ===== BASIC SEO ===== -->
+<meta charset="UTF-8">
 <title>GlobifyTrade International | Trusted Exporter from India</title>
 
-<meta name="description" content="GlobifyTrade International is a trusted Indian exporter supplying agricultural products, spices, grains, and food items worldwide with reliable logistics.">
-<meta name="keywords" content="Indian exporter, agricultural export, spices export, food export from India, GlobifyTrade">
-<meta name="author" content="GlobifyTrade International">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://www.globifytrade.com/">
+<meta name="description" content="GlobifyTrade International is a trusted Indian export company supplying agricultural products, spices, grains, and food products worldwide with complete documentation and reliable logistics.">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<meta name="keywords" content="Indian exporter, agriculture export from India, food exporter India, spices exporter, grains exporter, GlobifyTrade International">
+
+<meta name="author" content="GlobifyTrade International">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== OPEN GRAPH (Social Sharing) ===== -->
+<meta property="og:title" content="GlobifyTrade International | Global Export & Trade Solutions">
+<meta property="og:description" content="Connecting Indian quality products with global markets through reliable export solutions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.globifytrade.com">
+
+<!-- ===== FAVICON ===== -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 
 <style>
-/* ================= RESET ================= */
-*{box-sizing:border-box}
-html,body{
+/* ===== RESET ===== */
+*{
   margin:0;
   padding:0;
-  width:100%;
-  overflow-x:hidden;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,
-  "Segoe UI",Roboto,Arial,sans-serif;
-}
-
-/* ================= NAVBAR ================= */
-.navbar{
-  height:70px;
-  z-index:1050;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
 }
 body{
-  padding-top:70px; /* navbar offset */
+  background:#f5f6f7;
+  color:#222;
+  line-height:1.6;
 }
 
-/* ================= HERO ================= */
-.hero-carousel,
-.hero-carousel .carousel-inner,
-.hero-carousel .carousel-item{
-  height:calc(100vh - 70px);
-}
-
-.hero-carousel img{
+/* ===== NAVBAR ===== */
+header{
+  position:fixed;
+  top:0;
+  left:0;
   width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
+  background:#111827;
+  z-index:1000;
 }
-
-/* HERO CAPTION */
-.carousel-caption{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  bottom:auto;
-  background:rgba(0,0,0,0.55);
-  padding:22px;
-  border-radius:14px;
-  max-width:90%;
-  text-align:center;
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 22px;
 }
-
-.carousel-caption h1{
-  font-size:26px;
+.logo{
+  color:#fff;
+  font-size:20px;
+  font-weight:bold;
 }
-.carousel-caption p{
+.menu{
+  display:flex;
+  gap:22px;
+}
+.menu a{
+  color:#fff;
+  text-decoration:none;
   font-size:15px;
 }
-
-/* MOBILE HERO */
-@media(max-width:768px){
-  .carousel-caption h1{font-size:22px}
-  .carousel-caption p{font-size:14px}
+.menu a:hover{
+  color:#fbbf24;
 }
-
-/* ================= SERVICES ================= */
-.service-card{
-  text-align:center;
-  padding:30px;
-  background:#fff;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  height:100%;
-}
-.service-card i{
-  font-size:40px;
-  color:#f0ad4e;
-  margin-bottom:15px;
-}
-
-/* ================= AIM / MISSION ================= */
-.mission-box{
-  background:#fff;
-  padding:35px;
-  border-radius:15px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.15);
-  text-align:center;
-  height:100%;
-}
-
-/* ================= PORTS ================= */
-.port-card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:12px;
-}
-
-/* ================= CTA ================= */
-.cta{
-  background:#f0ad4e;
-  color:#000;
-  padding:60px 20px;
-  text-align:center;
-}
-
-/* ================= FOOTER ================= */
-.footer{
-  background:#111;
-  color:#bbb;
-  padding:50px 0 25px;
-}
-.footer a{
-  color:#f0ad4e;
-  text-decoration:none;
-}
-.footer a:hover{color:#fff}
-
-/* ================= WHATSAPP ================= */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:60px;
-  height:60px;
-  background:#25d366;
+.hamburger{
+  display:none;
+  font-size:26px;
   color:#fff;
+  cursor:pointer;
+}
+
+/* ===== HERO ===== */
+.hero{
+  margin-top:70px;
+  min-height:85vh;
+  background:url("https://images.unsplash.com/photo-1541976076758-347942db1975") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
-  border-radius:50%;
-  font-size:26px;
-  z-index:999;
+}
+.hero-content{
+  background:rgba(0,0,0,0.65);
+  padding:38px;
+  border-radius:18px;
+  text-align:center;
+  max-width:900px;
+}
+.hero-content h1{
+  color:#fff;
+  font-size:34px;
+  margin-bottom:14px;
+}
+.hero-content p{
+  color:#ddd;
+  font-size:16px;
+  margin-bottom:24px;
+}
+.hero-content a{
+  background:#fbbf24;
+  color:#000;
+  padding:12px 28px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* ===== SECTION COMMON ===== */
+section{
+  padding:70px 22px;
+}
+.section-title{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:40px;
+}
+
+/* ===== SERVICES ===== */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+}
+.service-card{
+  background:#fff;
+  padding:28px;
+  border-radius:16px;
+  text-align:center;
+  transition:0.35s;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+.service-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.18);
+}
+
+/* ===== AIM & MISSION ===== */
+.aim-mission{
+  background:#f1f5f9;
+}
+.aim-mission-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+}
+.box{
+  background:#fff;
+  padding:36px;
+  border-radius:18px;
+  box-shadow:0 10px 24px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(0,0,0,0.2);
+}
+
+/* ===== PORTS ===== */
+.ports{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+.port-card{
+  background:#fff;
+  padding:22px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#020617;
+  color:#ccc;
+  text-align:center;
+  padding:22px;
+  font-size:14px;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .menu{
+    position:absolute;
+    top:60px;
+    right:0;
+    background:#111827;
+    width:100%;
+    flex-direction:column;
+    display:none;
+  }
+  .menu a{
+    padding:15px;
+    border-top:1px solid #333;
+  }
+  .hamburger{
+    display:block;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-<div class="container">
-<a class="navbar-brand fw-bold" href="index.html">GlobifyTrade International</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="nav">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-<li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-<li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
-<li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
-<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-</ul>
-</div>
-</div>
-</nav>
+<header>
+  <div class="navbar">
+    <div class="logo">GlobifyTrade International</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav class="menu" id="menu">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Products</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
 
-<!-- HERO -->
-<div id="heroSlider" class="carousel slide hero-carousel" data-bs-ride="carousel">
-<div class="carousel-inner">
+<main>
 
-<div class="carousel-item active">
-<img src="india.jpg" alt="Indian Export">
-<div class="carousel-caption">
-<h1>Global Export & Trade Solutions</h1>
-<p>Connecting Indian Quality with Global Markets</p>
-<a href="products.html" class="btn btn-warning btn-lg">Explore Products</a>
-</div>
-</div>
-
-<div class="carousel-item">
-<img src="logistics.jpg" alt="Logistics">
-<div class="carousel-caption">
-<h1>Reliable International Logistics</h1>
-<p>Sea & Air Freight with Complete Documentation</p>
-</div>
-</div>
-
-<div class="carousel-item">
-<img src="trust.jpg" alt="Trusted Export Partner">
-<div class="carousel-caption">
-<h1>Trusted Export Partner</h1>
-<p>India to World – Smooth & Secure Shipments</p>
-</div>
-</div>
-
-</div>
-</div>
-
-<!-- SERVICES -->
-<section class="py-5 bg-light">
-<div class="container">
-<h2 class="text-center mb-5">Our Export Services</h2>
-<div class="row g-4">
-<div class="col-md-4">
-<div class="service-card">
-<i class="fa-solid fa-box"></i>
-<h5>Product Sourcing</h5>
-<p>Verified manufacturers across India.</p>
-</div>
-</div>
-<div class="col-md-4">
-<div class="service-card">
-<i class="fa-solid fa-clipboard-check"></i>
-<h5>Quality Inspection</h5>
-<p>Export-grade compliance.</p>
-</div>
-</div>
-<div class="col-md-4">
-<div class="service-card">
-<i class="fa-solid fa-ship"></i>
-<h5>Global Logistics</h5>
-<p>Sea & Air freight worldwide.</p>
-</div>
-</div>
-</div>
-</div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Global Export & Trade Solutions from India</h1>
+    <p>Trusted exporter of Indian agricultural and food products with worldwide delivery and complete documentation.</p>
+    <a href="#">Explore Products</a>
+  </div>
 </section>
 
-<!-- AIM / MISSION -->
-<section class="py-5 bg-light">
-<div class="container">
-<h2 class="text-center mb-5">Our Mission & Aim</h2>
-<div class="row g-4">
-<div class="col-md-6">
-<div class="mission-box">
-<h4>Our Mission</h4>
-<p>To deliver high-quality Indian products globally through transparent trade and reliable logistics.</p>
-</div>
-</div>
-<div class="col-md-6">
-<div class="mission-box">
-<h4>Our Aim</h4>
-<p>To become a trusted global export brand supporting manufacturers and international buyers.</p>
-</div>
-</div>
-</div>
-</div>
+<section>
+  <h2 class="section-title">Our Export Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <h3>Product Sourcing</h3>
+      <p>Direct sourcing from verified Indian farmers and manufacturers.</p>
+    </div>
+    <div class="service-card">
+      <h3>Quality Control</h3>
+      <p>Strict export-grade quality inspection and compliance.</p>
+    </div>
+    <div class="service-card">
+      <h3>Export Documentation</h3>
+      <p>Complete documentation including certificates and customs clearance.</p>
+    </div>
+    <div class="service-card">
+      <h3>International Logistics</h3>
+      <p>Sea and air freight with reliable global delivery.</p>
+    </div>
+  </div>
 </section>
 
-<!-- PORTS -->
-<section class="py-5">
-<div class="container">
-<h2 class="text-center mb-5">Major Shipping Ports</h2>
-<div class="row g-4">
-<div class="col-md-6">
-<div class="port-card">
-<img src="nava.jpg" alt="Nhava Sheva Port">
-<h5 class="mt-3">Nhava Sheva Port (JNPT)</h5>
-<p>India’s largest container port with fast customs clearance.</p>
-</div>
-</div>
-<div class="col-md-6">
-<div class="port-card">
-<img src="kandala.jpg" alt="Gujarat Ports">
-<h5 class="mt-3">Mundra / Kandla Ports</h5>
-<p>Strategic ports for bulk and container exports.</p>
-</div>
-</div>
-</div>
-</div>
+<section class="aim-mission">
+  <h2 class="section-title">Our Aim & Mission</h2>
+  <div class="aim-mission-grid">
+    <div class="box">
+      <h3>Our Aim</h3>
+      <p>
+        Our aim is to become a globally trusted Indian export company by delivering
+        premium quality agricultural and food products while maintaining transparency,
+        reliability, and long-term international partnerships.
+      </p>
+    </div>
+    <div class="box">
+      <h3>Our Mission</h3>
+      <p>
+        Our mission is to connect Indian producers with global markets by ensuring
+        quality assurance, timely delivery, ethical sourcing, and complete export
+        compliance at every stage.
+      </p>
+    </div>
+  </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-<h2>Looking for a Reliable Export Partner?</h2>
-<a href="contact.html" class="btn btn-dark btn-lg mt-3">Contact Us</a>
+<section>
+  <h2 class="section-title">Our Nearest Ports – We Do Export</h2>
+  <div class="ports">
+    <div class="port-card">
+      <h4>JNPT – Mumbai</h4>
+      <p>India’s largest container port with global connectivity.</p>
+    </div>
+    <div class="port-card">
+      <h4>Mundra Port</h4>
+      <p>Major hub for agricultural and bulk exports.</p>
+    </div>
+    <div class="port-card">
+      <h4>Nhava Sheva</h4>
+      <p>Fast clearance and efficient export operations.</p>
+    </div>
+    <div class="port-card">
+      <h4>Chennai Port</h4>
+      <p>Key gateway for South India international exports.</p>
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-<div class="container">
-<div class="row">
-<div class="col-md-4">
-<h5 class="text-white">GlobifyTrade International</h5>
-<p>Trusted Indian exporter delivering quality products globally.</p>
-</div>
-<div class="col-md-4">
-<h5 class="text-white">Quick Links</h5>
-<ul class="list-unstyled">
-<li><a href="about.html">About Us</a></li>
-<li><a href="products.html">Products</a></li>
-<li><a href="/blog/">Blog</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</div>
-<div class="col-md-4">
-<h5 class="text-white">Contact</h5>
-<p>Email: info@globifytrade.com</p>
-<p>WhatsApp: +91 92708 40556</p>
-</div>
-</div>
-<hr class="border-secondary">
-<p class="text-center mb-0">© 2025 GlobifyTrade International. All Rights Reserved.</p>
-</div>
+</main>
+
+<footer>
+  © 2026 GlobifyTrade International | Trusted Exporter from India
 </footer>
 
-<a href="https://wa.me/919270840556" class="whatsapp-float">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
+<script>
+function toggleMenu(){
+  let menu=document.getElementById("menu");
+  menu.style.display = (menu.style.display==="flex") ? "none" : "flex";
+}
+</script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
