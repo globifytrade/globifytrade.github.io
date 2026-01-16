@@ -15,8 +15,9 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-  /* =========================
-   RESET & BASE
+  
+/* =========================
+   GLOBAL RESET
 ========================= */
 *{
   box-sizing: border-box;
@@ -27,56 +28,76 @@ html, body{
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (FIXED TOP)
 ========================= */
 .navbar{
+  height: 70px;
   z-index: 1050;
 }
 
 /* =========================
-   HERO / CAROUSEL (FINAL STABLE)
+   HERO / CAROUSEL (NO GAP)
 ========================= */
 .hero-carousel{
   position: relative;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-/* Same height for all slides */
+/* Hero height = full screen minus navbar */
+.hero-carousel,
 .hero-carousel .carousel-inner,
 .hero-carousel .carousel-item{
-  height: 75vh;
+  height: calc(100vh - 70px);
 }
 
-/* Desktop / default look */
+/* Hero image */
 .hero-carousel .carousel-item img{
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* clean, no gaps */
-  object-position: center;
+  object-fit: cover;
   display: block;
 }
 
-/* Caption */
+/* =========================
+   HERO CAPTION (PERFECT CENTER)
+========================= */
 .carousel-caption{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: auto;
   background: rgba(0,0,0,0.55);
-  padding: 22px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 14px;
+  max-width: 90%;
+  text-align: center;
 }
 
-/* Mobile hero behaviour */
-@media (max-width: 768px){
+.carousel-caption h1{
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p{
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   MOBILE HERO FIX
+========================= */
+@media(max-width: 768px){
+  .hero-carousel,
   .hero-carousel .carousel-inner,
   .hero-carousel .carousel-item{
-    height: 65vh;
-  }
-
-  .hero-carousel .carousel-item img{
-    object-fit: contain;      /* mobile वर full actual image */
+    height: calc(100vh - 70px);
   }
 
   .carousel-caption h1{
@@ -145,7 +166,7 @@ html, body{
 }
 
 /* =========================
-   FOOTER (NO GAP)
+   FOOTER (NO WHITE SPACE)
 ========================= */
 .footer{
   background: #111;
@@ -192,7 +213,7 @@ html, body{
 /* =========================
    MOBILE MENU (BOOTSTRAP 5)
 ========================= */
-@media (max-width: 992px){
+@media(max-width: 992px){
   .navbar-collapse{
     background: #212529;
     padding: 15px;
@@ -203,7 +224,6 @@ html, body{
     color: #fff !important;
     padding: 10px 0;
   }
-}
 </style> 
 </head>
 
@@ -313,6 +333,7 @@ html, body{
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
