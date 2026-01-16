@@ -221,14 +221,34 @@ margin:0;
 padding-bottom:20px;
 }
 
-/* ===== BODY FLEX FIX (FOOTER GAP) ===== */
-body{
-display:flex;
-flex-direction:column;
+/* ===== FOOTER HARD FIX ===== */
+footer.footer{
+position:relative;
+bottom:0;
+width:100%;
+margin:0 !important;
+padding-bottom:15px;
 }
 
-footer{
-margin-top:auto;
+/* BODY OVERFLOW FIX */
+body{
+min-height:unset !important;
+}
+
+/* REMOVE ANY EXTRA SPACE AFTER FOOTER */
+footer.footer::after{
+content:'';
+display:block;
+height:0;
+margin:0;
+padding:0;
+}
+
+/* MOBILE SAFE AREA FIX */
+@media(max-width:768px){
+footer.footer{
+padding-bottom:10px;
+}
 }
 
 </style>
@@ -239,7 +259,7 @@ margin-top:auto;
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" style="height:70px;">
 <div class="container">
-<a class="navbar-brand fw-bold" href="www.globifytrade.com">GlobifyTrade International </a>
+<a class="navbar-brand fw-bold" href="https://www.globifytrade.com/">GlobifyTrade International </a>
 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -434,6 +454,7 @@ compliance-driven international trade.
 </body>
 
 </html>
+
 
 
 
