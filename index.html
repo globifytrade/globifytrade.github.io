@@ -17,6 +17,7 @@
 <style>
 
 /* ===== BASE RESET ===== */
+  
 *{box-sizing:border-box;}
 html,body{
 margin:0;
@@ -25,31 +26,16 @@ width:100%;
 overflow-x:hidden;
 }
 
-/* ===== NAVBAR OFFSET ===== */
-  
-.hero-carousel{
-margin-top:72px; /* exactly navbar height */
-}
-
 /* ===== NAVBAR ===== */
+  
+body{
+padding-top:72px; /* fixed navbar height */
+}
+  
 .navbar{
 z-index:1050;
 }
 
-/* ===== HERO ===== */
-  
-.hero-carousel img{
-width:100%;
-height:80vh;
-object-fit:cover;
-display:block;
-}
-
-@media(max-width:768px){
-.hero-carousel img{
-height:70vh;
-}
-}
 .carousel-caption{
 background:rgba(0,0,0,0.55);
 padding:25px;
@@ -150,6 +136,36 @@ border-radius:0 0 12px 12px;
 .navbar-nav .nav-link{
 color:#fff!important;
 padding:10px 0;
+}
+}
+
+/* ===== FINAL HERO FIX ===== */
+
+.hero-carousel{
+position: relative;
+overflow: hidden;
+}
+
+/* each slide height */
+.hero-carousel .carousel-item{
+height: 70vh;
+}
+
+/* image full cover without gap */
+.hero-carousel .carousel-item img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* mobile fine tune */
+@media (max-width:768px){
+.hero-carousel .carousel-item{
+height: 65vh;
 }
 }
 
@@ -262,5 +278,6 @@ padding:10px 0;
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
