@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <style>
 
@@ -142,25 +142,29 @@ width:100%;
 
 /* ===== WHATSAPP ===== */
 .whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:#fff;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-font-size:26px;
-z-index:999;
-animation:pulse 2s infinite;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    overflow: hidden;
+    line-height: 1;
+    z-index: 9999;
+    animation: pulse 2s infinite;
 }
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6)}
-70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+
+.whatsapp-float i{
+    font-size: 34px;
+    display: block;
+    line-height: 1;
+    color: #fff;
 }
 
 /* ===== MISSION / AIM ===== */
@@ -373,8 +377,11 @@ from India to global markets with reliable logistics.
 </div>
 </footer>
 
-<a href="https://wa.me/918668652404" class="whatsapp-float">
-<i class="fa-brands fa-whatsapp"></i>
+<a href="https://wa.me/918668652404"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
 </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
