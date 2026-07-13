@@ -16,18 +16,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <style>
 /* ===== ANIMATED BACKGROUND ===== */
 body{
-background: linear-gradient(-45deg,#1d2671,#c33764,#0f2027,#2c5364);
-background-size:400% 400%;
-animation:bgMove 12s ease infinite;
-color:#fff;
-font-family:'Segoe UI',sans-serif;
+    margin:0;
+    overflow-x:hidden;
+    background:linear-gradient(-45deg,#1d2671,#c33764,#0f2027,#2c5364);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    color:#fff;
+    font-family:'Segoe UI',sans-serif;
 }
-   
-   body{
-  margin: 0;
-  overflow-x: hidden;
-}
-
 
 @keyframes bgMove{
 0%{background-position:0% 50%}
@@ -216,7 +212,16 @@ gap:12px;
 }
 
 }
-   
+.footer{
+    margin-top:40px;
+    clear:both;
+   }
+
+   .footer{
+    background:#111;
+    width:100%;
+    padding:60px 0 30px;
+   }
 </style>
 </head>
 
@@ -242,7 +247,7 @@ gap:12px;
 </nav>
 
 <!-- PRODUCTS -->
-<div class="container py-5 mt-5 pt-5">
+<div class="container py-5 mt-5 pt-5 mb-5">
 <h1 class="text-center fw-bold mb-5">Our Products</h1>
 
 <div class="row g-4">
@@ -500,7 +505,7 @@ gap:12px;
 
 <footer class="footer">
 
-<div class="container-fluid px-4">
+<div class="container">
 
 <div class="row gy-4">
 
