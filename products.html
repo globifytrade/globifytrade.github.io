@@ -1,470 +1,925 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<title>Our Products | GlobifyTrade</title>  
-<meta name="viewport" content="width=device-width, initial-scale=1">  
-<meta name="description" content="GlobifyTrade International – Rice, Onion, Vegetables, Spices, Fruits, Makhana, Coconut, Jaggery आणि Export Products चे trusted exporter.">  
-<meta name="keywords" content="Rice Exporter India, Onion Export, Fresh Vegetables Export, Indian Spices Exporter, GlobifyTrade Products">  
-<meta name="robots" content="index, follow">  
-<link rel="canonical" href="https://www.globifytrade.com/products.html">  
-<link rel="stylesheet"  
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">  
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  <style>  
-/* ===== ANIMATED BACKGROUND ===== */  
-body{  
-    margin:0;  
-    overflow-x:hidden;  
-    background:linear-gradient(-45deg,#1d2671,#c33764,#0f2027,#2c5364);  
-    background-size:400% 400%;  
-    animation:bgMove 12s ease infinite;  
-    color:#fff;  
-    font-family:'Segoe UI',sans-serif;  
-}  
-  
-@keyframes bgMove{  
-0%{background-position:0% 50%}  
-50%{background-position:100% 50%}  
-100%{background-position:0% 50%}  
-}  
-  
-/* ===== PRODUCT CARD ===== */  
-.product-card{  
-    background:rgba(255,255,255,.15);  
-    backdrop-filter:blur(12px);  
-    border-radius:20px;  
-    overflow:hidden;  
-    border:1px solid rgba(255,255,255,.25);  
-    box-shadow:0 15px 35px rgba(0,0,0,.35);  
-    transition:.3s;  
-    display:flex;  
-    flex-direction:column;  
-    height:100%;  
-}  
-  
-.product-card img{  
-    width:100%;  
-    height:220px;  
-    object-fit:cover;  
-    object-position:center;  
-    display:block;  
-}  
-  
-.product-card h5{  
-    margin:20px 0 15px;  
-    font-size:2rem;  
-    font-weight:700;  
-    color:#fff;  
-    padding:0 15px;  
-    min-height:60px;  
-}  
-  
-.product-buttons{  
-    display:flex;  
-    justify-content:center;  
-    gap:12px;  
-    padding:0 15px 20px;  
-    margin-top:auto;  
-}  
-  
-@media (max-width:768px){  
-  
-.product-card img{  
-    height:180px;  
-}  
-  
-.product-card h5{  
-    font-size:1.5rem;  
-    min-height:50px;  
-}  
-  
-}  
-  
-/* Button container (optional but recommended) */  
-.product-buttons{  
-padding:0 15px 20px;  
-display:flex;  
-justify-content:center;  
-gap:12px;  
-}  
-  
-/* Common button style */  
-.product-btn {  
-  width: 140px;              /* ✅ Same width for all buttons */  
-  height: 44px;  
-  border-radius: 25px;  
-  border: none;  
-  font-size: 15px;  
-  font-weight: 600;  
-  color: #fff;  
-  cursor: pointer;  
-  transition: all 0.35s ease;  
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);  
-}  
-  
-/* Enquire Button */  
-.btn-enquire {  
-  background: linear-gradient(135deg, #00c6ff, #0072ff);  
-}  
-  
-/* View More Button */  
-.btn-view {  
-  background: linear-gradient(135deg, #8e2de2, #4a00e0);  
-}  
-  
-/* Hover animation */  
-.product-btn:hover {  
-  transform: translateY(-5px) scale(1.05);  
-  box-shadow: 0 12px 28px rgba(0,0,0,0.4);  
-  filter: brightness(1.1);  
-}  
-  
-/* Active click effect */  
-.product-btn:active {  
-  transform: scale(0.96);  
-}  
-  
- /* Anchor tag button fix */  
-.product-btn{  
-  display: inline-flex;  
-  align-items: center;  
-  justify-content: center;  
-  text-decoration: none;   /* underline काढण्यासाठी */  
-}  
-/* ===== FOOTER ===== */  
-  
-.footer{  
-    width:100%;  
-    margin-top:40px;  
-    padding:60px 20px 30px;  
-    background:linear-gradient(to bottom,  
-        rgba(0,0,0,0),  
-        rgba(0,0,0,.75),  
-        #111);  
-    color:#fff;  
-    border-top:1px solid rgba(255,255,255,.15);  
-}  
-  
-.footer h4{  
-    color:#fff;  
-    font-weight:700;  
-    margin-bottom:20px;  
-}  
-  
-.footer p,  
-.footer li{  
-    color:#d8d8d8;  
-    line-height:1.8;  
-}  
-  
-.footer a{  
-    color:#19c8ff;  
-    text-decoration:none;  
-    transition:.3s;  
-}  
-  
-.footer a:hover{  
-    color:#25D366;  
-}  
-  
-.footer hr{  
-    border-color:#444;  
-}  
-  
-.social-icons{  
-    display:flex;  
-    gap:12px;  
-    justify-content:center;  
-    margin-top:20px;  
-}  
-  
-.social-icons a{  
-    width:45px;  
-    height:45px;  
-    border-radius:50%;  
-    background:#222;  
-    display:flex;  
-    align-items:center;  
-    justify-content:center;  
-    color:#fff;  
-    font-size:20px;  
-    transition:.3s;  
-}  
-  
-.social-icons a:hover{  
-    background:#25D366;  
-    transform:translateY(-5px);  
-}  
-  
-/* ===== WHATSAPP ===== */  
-  
-.whatsapp-float{  
-    position:fixed;  
-    right:20px;  
-    bottom:25px;  
-    width:65px;  
-    height:65px;  
-    background:#25D366;  
-    color:#fff;  
-    border-radius:50%;  
-    display:flex;  
-    justify-content:center;  
-    align-items:center;  
-    font-size:34px;  
-    text-decoration:none;  
-    z-index:99999;  
-    box-shadow:0 10px 25px rgba(0,0,0,.35);  
-    animation:whatsapp 2s infinite;  
-}  
-  
-.whatsapp-float:hover{  
-    color:#fff;  
-}  
-  
-@keyframes whatsapp{  
-  
-0%{  
-transform:scale(1);  
-box-shadow:0 0 0 0 rgba(37,211,102,.7);  
-}  
-  
-50%{  
-transform:scale(1.12) translateY(-6px);  
-box-shadow:0 0 0 15px rgba(37,211,102,0);  
-}  
-  
-100%{  
-transform:scale(1);  
-box-shadow:0 0 0 0 rgba(37,211,102,0);  
-}  
-  
-}  
-  
-@media(max-width:768px){  
-  
-.footer{  
-text-align:center;  
-}  
-  
-.social-icons{  
-justify-content:center;  
-}  
-  
-.whatsapp-float{  
-right:18px;  
-bottom:20px;  
-width:60px;  
-height:60px;  
-font-size:30px;  
-}  
-  
-}  
-</style>  </head>  <body>  <!-- NAVBAR -->  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">  
-<div class="container">  
-<a class="navbar-brand fw-bold" href="index.html">GlobifyTrade International</a>  
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">  
-<span class="navbar-toggler-icon"></span>  
-</button>  
-<div class="collapse navbar-collapse" id="nav">  
-<ul class="navbar-nav ms-auto">  
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>  
-<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>  
-<li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>  
-<li class="nav-item"><a href="blog/index.html" class="nav-link">Blog</a></li>  
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>  
-</ul>  
-</div>  
-</div>  
-</nav>  <!-- PRODUCTS -->  <div class="container py-5 mt-5 pt-5 mb-5">  
-<h1 class="text-center fw-bold mb-5">Our Products</h1>  <div class="row g-4">  <!-- PRODUCT ITEM -->  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="rice.jpg">  
-<h5>Rice</h5>  
-<div class="product-buttons">  
-  <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="rice.html" class="product-btn btn-view">View More</a>  
-</div>  
-</div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="onions.jpg">  
-<h5>Onions</h5>  
-<div class="product-buttons">  
-  <a href="enquiry.html"  class="product-btn btn-enquire">Enquire</a>  
-   <a href="onions.html" class="product-btn btn-view">View More</a>  
-</div>  
-</div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="vegetables.jpg">  
-<h5>Vegetables</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html"  class="product-btn btn-enquire">Enquire</a>  
- <a href="vegitables.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="chitale.jpg">  
-<h5>Chitale Products</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html"  class="product-btn btn-enquire">Enquire</a>  
-<a href="chitale-products.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="chilli.jpg">  
-<h5>Green Chilli</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
- <a href="green-chilli.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="lemon.jpg">  
-<h5>Lemon</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="lemon.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="moringa.jpg">  
-<h5>Moringa Powder</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="moringa-powder.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="lasun.jpg">  
-<h5>Garlic</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="garlic.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="tomatos.jpg">  
-<h5>Fresh Tomato</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="fresh-tomato.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="pome.jpg">  
-<h5>Pomegranate</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="pomegranate.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="water.jpg">  
-<h5>Watermelon</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="watermelon.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="spices.jpg">  
-<h5>Indian Spices</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="indian-spices.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="mrx.jpg">  
-<h5>MRX Aqua</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="mrx-aqua.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="Makhana.png">  
-<h5>Fresh Makhana</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="makhana.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="Egg.jpg">  
-<h5>Fresh Egg</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="fresh-egg.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="Ginger.png">  
-<h5>Fresh Ginger</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="fresh-ginger.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="coconut.png">  
-<h5>Fresh Coconut</h5>  
-<div class="product-buttons">  
-<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="fresh-coconut.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="jaggery.png">  
-<h5>Fresh Jaggery</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="fresh-jaggery.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="fruits.jpg">  
-<h5>Fresh Fruits</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="fresh-fruits.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  <div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="banana.jpg">  
-<h5>Fresh Green Banana</h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="fresh-banana.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  
-<div class="col-md-3 col-sm-6">  
-<div class="product-card">  
-<img src="Ganesh.png">  
-<h5>Customize Ganesh Statue </h5>  
-<div class="product-buttons">  
- <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>  
-<a href="ganesh-statue.html" class="product-btn btn-view">View More</a>  
-</div>  </div>  
-</div>  
-</div>  <footer class="footer">  <div class="container">  <div class="row gy-4">  <div class="col-lg-4 col-md-6">  
-<h4>🌍 GlobifyTrade International</h4>  <p class="mt-3">  
-Trusted Indian Exporter of Fresh Fruits, Vegetables,  
-Rice, Spices, Coconut, FMCG Products &  
-Customized Export Solutions.  
-</p>  </div>  <div class="col-lg-4 col-md-6">  <h4>Quick Links</h4>  <ul class="list-unstyled mt-3">  <li><a href="index.html"><i class="fa fa-house"></i> Home</a></li>  <li><a href="about.html"><i class="fa fa-user"></i> About</a></li>  <li><a href="products.html"><i class="fa fa-box"></i> Products</a></li>  <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>  <li><a href="blog/index.html"><i class="fa fa-blog"></i> Blog</a></li>  </ul>  </div>  <div class="col-lg-4">  <h4>Contact Us</h4>  <p><i class="fa fa-phone"></i> +91 8668652404</p>  <p><i class="fa fa-envelope"></i> info@globifytrade.com</p>  <p><i class="fa fa-globe"></i> www.globifytrade.com</p>  <p><i class="fa fa-location-dot"></i> Pune, Maharashtra, India</p>  <div class="social-icons mt-3">  <a href="https://wa.me/918668652404" target="_blank">  
-<i class="fab fa-whatsapp"></i>  
-</a>  <a href="https://www.instagram.com/globifytrade" target="_blank">  
-<i class="fab fa-instagram"></i>  
-</a>  <a href="https://www.linkedin.com/in/rahul-pawar-1870353a1?utm_source=share_via&utm_content=profile&utm_medium=member_android/" target="_blank">  
-<i class="fab fa-linkedin"></i>  
-</a>  </div>  </div>  </div>  <hr>  <p class="text-center mb-0">  
-© 2025 <strong>GlobifyTrade International</strong>. All Rights Reserved.  
-</p>  </div>  </footer>  <!-- WHATSAPP CHAT BUTTON -->  <a href="https://wa.me/918668652404?text=Hello%20GlobifyTrade,%20I%20am%20interested%20in%20your%20export%20products."  
-target="_blank"  
-class="whatsapp-float">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Products | GlobifyTrade International</title>
+
+<meta name="description"
+content="GlobifyTrade International Export Products - Rice, Onion, Fresh Fruits, Vegetables, Spices, Coconut, Makhana, FMCG Products and More">
+
+<meta name="keywords"
+content="Rice Exporter, Onion Exporter, Indian Exporter, Fresh Vegetables, Fruits Export, GlobifyTrade">
+
+<meta name="robots" content="index,follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(135deg,#07152f,#102b58,#07152f);
+background-size:300% 300%;
+animation:bgmove 10s infinite alternate;
+color:#fff;
+display:flex;
+flex-direction:column;
+min-height:100vh;
+
+}
+
+@keyframes bgmove{
+
+0%{
+background-position:left;
+}
+
+100%{
+background-position:right;
+}
+
+}
+
+main{
+flex:1;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+backdrop-filter:blur(15px);
+background:rgba(0,0,0,.45)!important;
+box-shadow:0 10px 25px rgba(0,0,0,.30);
+
+}
+
+.navbar-brand{
+
+font-weight:700;
+font-size:25px;
+
+}
+
+.nav-link{
+
+color:#fff!important;
+font-weight:500;
+transition:.35s;
+
+}
+
+.nav-link:hover{
+
+color:#22d3ee!important;
+
+}
+
+/* PAGE TITLE */
+
+.page-title{
+
+text-align:center;
+margin-top:120px;
+margin-bottom:55px;
+
+}
+
+.page-title h1{
+
+font-size:45px;
+font-weight:800;
+
+}
+
+.page-title p{
+
+color:#d4d4d4;
+margin-top:10px;
+
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+
+height:100%;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+backdrop-filter:blur(14px);
+border-radius:22px;
+overflow:hidden;
+transition:.45s;
+display:flex;
+flex-direction:column;
+
+}
+
+.product-card:hover{
+
+transform:translateY(-12px);
+box-shadow:0 25px 45px rgba(0,0,0,.35);
+
+}
+
+.image-box{
+
+aspect-ratio:16/11;
+overflow:hidden;
+
+}
+
+.image-box img{
+
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+transition:.55s;
+
+}
+
+.product-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.product-title{
+
+padding:18px;
+min-height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+font-size:20px;
+font-weight:600;
+
+}
+
+.product-buttons{
+
+display:flex;
+justify-content:center;
+gap:12px;
+padding:0 15px 22px;
+margin-top:auto;
+
+}
+
+.product-btn{
+
+width:145px;
+height:46px;
+border-radius:40px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+font-weight:600;
+transition:.35s;
+color:#fff;
+
+}
+
+.btn-enquire{
+
+background:linear-gradient(135deg,#00b4ff,#006eff);
+
+}
+
+.btn-view{
+
+background:linear-gradient(135deg,#8a2be2,#5b21b6);
+
+}
+
+.product-btn:hover{
+
+transform:translateY(-5px) scale(1.05);
+color:#fff;
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+@media(max-width:768px){
+
+.page-title h1{
+
+font-size:34px;
+
+}
+
+.product-title{
+
+font-size:18px;
+
+}
+
+.product-btn{
+
+width:130px;
+
+}
+
+}
+
+/* FOOTER */
+
+footer{
+
+margin-top:auto;
+background:#090909;
+padding:60px 0 20px;
+
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+position:fixed;
+right:22px;
+bottom:25px;
+width:68px;
+height:68px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+color:#fff;
+text-decoration:none;
+z-index:999;
+animation:float 2s infinite;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+box-shadow:0 0 0 rgba(37,211,102,.5);
+}
+
+50%{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(37,211,102,.8);
+}
+
+100%{
+transform:translateY(0);
+box-shadow:0 0 0 rgba(37,211,102,0);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand text-white" href="index.html">
+
+GlobifyTrade International
+
+</a>
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="products.html">Products</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="blog/index.html">Blog</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<main>
+
+<div class="container">
+
+<div class="page-title">
+
+<h1>Our Products</h1>
+
+<p>
+Premium Quality Agricultural & FMCG Export Products
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<!-- Rice -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="rice.jpg" alt="Rice" loading="lazy">
+        </div>
+        <div class="product-title">Premium Rice</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="rice.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Onion -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="onions.jpg" alt="Onion" loading="lazy">
+        </div>
+        <div class="product-title">Fresh Onion</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="onions.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Vegetables -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="vegetables.jpg" alt="Vegetables" loading="lazy">
+        </div>
+        <div class="product-title">Fresh Vegetables</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="vegitables.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Chitale -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="chitale.jpg" alt="Chitale Products" loading="lazy">
+        </div>
+        <div class="product-title">Chitale Products</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="chitale-products.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Green Chilli -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="chilli.jpg" alt="Green Chilli" loading="lazy">
+        </div>
+        <div class="product-title">Green Chilli</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="green-chilli.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Lemon -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="lemon.jpg" alt="Lemon" loading="lazy">
+        </div>
+        <div class="product-title">Fresh Lemon</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="lemon.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Garlic -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="lasun.jpg" alt="Garlic" loading="lazy">
+        </div>
+        <div class="product-title">Fresh Garlic</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="garlic.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Moringa -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="moringa.jpg" alt="Moringa Powder" loading="lazy">
+        </div>
+        <div class="product-title">Moringa Powder</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="moringa-powder.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Tomato -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="tomatos.jpg" alt="Tomato" loading="lazy">
+        </div>
+        <div class="product-title">Fresh Tomato</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="fresh-tomato.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Pomegranate -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+    <div class="product-card">
+        <div class="image-box">
+            <img src="pome.jpg" alt="Pomegranate" loading="lazy">
+        </div>
+        <div class="product-title">Fresh Pomegranate</div>
+        <div class="product-buttons">
+            <a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+            <a href="pomegranate.html" class="product-btn btn-view">View More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Watermelon -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="water.jpg" alt="Watermelon" loading="lazy">
+</div>
+<div class="product-title">Fresh Watermelon</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="watermelon.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- Indian Spices -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="spices.jpg" alt="Indian Spices" loading="lazy">
+</div>
+<div class="product-title">Indian Spices</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="indian-spices.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- MRX Aqua -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="mrx.jpg" alt="MRX Aqua" loading="lazy">
+</div>
+<div class="product-title">MRX Aqua</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="mrx-aqua.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- Makhana -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="Makhana.png" alt="Makhana" loading="lazy">
+</div>
+<div class="product-title">Fresh Makhana</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="makhana.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- Egg -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="Egg.jpg" alt="Fresh Egg" loading="lazy">
+</div>
+<div class="product-title">Fresh Egg</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="fresh-egg.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- Ginger -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="Ginger.png" alt="Fresh Ginger" loading="lazy">
+</div>
+<div class="product-title">Fresh Ginger</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="fresh-ginger.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- Coconut -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="coconut.png" alt="Fresh Coconut" loading="lazy">
+</div>
+<div class="product-title">Fresh Coconut</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="fresh-coconut.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- Jaggery -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="jaggery.png" alt="Fresh Jaggery" loading="lazy">
+</div>
+<div class="product-title">Fresh Jaggery</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="fresh-jaggery.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- Fruits -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="fruits.jpg" alt="Fresh Fruits" loading="lazy">
+</div>
+<div class="product-title">Fresh Fruits</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="fresh-fruits.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- Banana -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="banana.jpg" alt="Fresh Banana" loading="lazy">
+</div>
+<div class="product-title">Fresh Green Banana</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="fresh-banana.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+<!-- Ganesh Statue -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+<div class="product-card">
+<div class="image-box">
+<img src="Ganesh.png" alt="Customize Ganesh Statue" loading="lazy">
+</div>
+<div class="product-title">Customize Ganesh Statue</div>
+<div class="product-buttons">
+<a href="enquiry.html" class="product-btn btn-enquire">Enquire</a>
+<a href="ganesh-statue.html" class="product-btn btn-view">View More</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="row gy-4">
+
+<div class="col-lg-4">
+
+<h4 class="fw-bold mb-3">🌍 GlobifyTrade International</h4>
+
+<p>
+
+Trusted Indian Exporter of Fresh Fruits, Vegetables, Rice,
+Spices, Coconut, FMCG Products and Customized Export Solutions.
+
+</p>
+
+</div>
+
+<div class="col-lg-4">
+
+<h4 class="fw-bold mb-3">Quick Links</h4>
+
+<ul class="list-unstyled">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="products.html">Products</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="blog/index.html">Blog</a></li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-4">
+
+<h4 class="fw-bold mb-3">Contact Us</h4>
+
+<p><i class="fa-solid fa-phone"></i> +91 8668652404</p>
+
+<p><i class="fa-solid fa-envelope"></i> info@globifytrade.com</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India</p>
+
+<div class="d-flex gap-3 mt-3">
+
+<a class="social" href="https://wa.me/918668652404" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a class="social" href="https://instagram.com/globifytrade" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a class="social" href="https://linkedin.com" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr class="my-4">
+
+<div class="text-center">
+
+© 2025 <strong>GlobifyTrade International</strong>. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/918668652404?text=Hello%20GlobifyTrade"
+class="whatsapp"
+target="_blank">
 
 <i class="fab fa-whatsapp"></i>
 
-</a>  </body>  
-</html>     
+</a>
+
+<style>
+
+/******** FOOTER ********/
+
+footer{
+
+background:#080808;
+padding:60px 0 20px;
+margin-top:auto;
+
+}
+
+footer h4{
+
+color:#fff;
+font-weight:700;
+
+}
+
+footer p,
+footer li,
+footer a{
+
+color:#d9d9d9;
+text-decoration:none;
+transition:.35s;
+
+}
+
+footer a:hover{
+
+color:#22d3ee;
+
+}
+
+.social{
+
+width:45px;
+height:45px;
+border-radius:50%;
+background:#1d1d1d;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+
+}
+
+.social:hover{
+
+transform:translateY(-6px) rotate(360deg);
+background:#25D366;
+color:#fff;
+
+}
+
+/******** WHATSAPP ********/
+
+.whatsapp{
+
+position:fixed;
+
+right:22px;
+
+bottom:25px;
+
+width:68px;
+
+height:68px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:34px;
+
+color:#fff;
+
+text-decoration:none;
+
+z-index:99999;
+
+animation:whatsapp 2s infinite;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+@keyframes whatsapp{
+
+0%{
+
+transform:scale(1);
+
+box-shadow:0 0 0 0 rgba(37,211,102,.6);
+
+}
+
+50%{
+
+transform:translateY(-8px) scale(1.12);
+
+box-shadow:0 0 0 18px rgba(37,211,102,0);
+
+}
+
+100%{
+
+transform:scale(1);
+
+box-shadow:0 0 0 0 rgba(37,211,102,0);
+
+}
+
+}
+
+.whatsapp:hover{
+
+color:#fff;
+
+transform:scale(1.15);
+
+}
+
+@media(max-width:768px){
+
+footer{
+
+text-align:center;
+
+}
+
+.social{
+
+margin:auto;
+
+}
+
+.whatsapp{
+
+width:60px;
+height:60px;
+font-size:30px;
+
+}
+
+}
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
