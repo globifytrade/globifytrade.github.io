@@ -4,21 +4,36 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1">
-
-<title>
-
-About Us | GlobifyTrade International
-
-</title>
+<title>About Us | GlobifyTrade International</title>
 
 <meta name="description"
-content="Trusted Indian Export Company">
+content="GlobifyTrade International is a trusted Indian Export Company exporting Fresh Fruits, Vegetables, Rice, Spices, FMCG Products and Customized Export Solutions worldwide.">
 
 <meta name="keywords"
-content="Exporter India,Rice,Onion,FMCG,Spices">
+content="Indian Exporter, Rice Export, Onion Export, Spices Export, FMCG Export, GlobifyTrade">
+
+<meta name="author"
+content="GlobifyTrade International">
+
+<meta property="og:title"
+content="About GlobifyTrade International">
+
+<meta property="og:description"
+content="Trusted Export Company from India">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:image"
+content="logo.png">
+
+<meta property="og:url"
+content="https://globifytrade.com">
+
+<link rel="icon"
+href="favicon.ico">
 
 <link rel="preconnect"
 href="https://fonts.googleapis.com">
@@ -38,12 +53,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <style>
 
+/* ===========================
+RESET
+=========================== */
+
 *{
 
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 
 }
 
@@ -55,21 +75,43 @@ scroll-behavior:smooth;
 
 body{
 
+font-family:'Poppins',sans-serif;
+
+overflow-x:hidden;
+
 background:linear-gradient(
 135deg,
-#081C15,
-#0B3D2E,
+#061A17,
+#0C3A2E,
 #1B4332,
-#2D6A4F,
-#081C15);
+#245B44,
+#061A17);
 
-background-size:400% 400%;
+background-size:500% 500%;
 
-animation:bgMove 15s ease infinite;
+animation:backgroundMove 18s ease infinite;
+
+color:#fff;
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
 
 }
-  
-@keyframes bgmove{
+
+main{
+
+flex:1;
+
+}
+
+/* ===========================
+BACKGROUND ANIMATION
+=========================== */
+
+@keyframes backgroundMove{
 
 0%{
 
@@ -91,55 +133,246 @@ background-position:0% 50%;
 
 }
 
-main{
+/* Floating Grid */
 
-flex:1;
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+
+background-size:38px 38px;
+
+opacity:.12;
+
+pointer-events:none;
+
+z-index:-1;
 
 }
 
-/* NAVBAR */
+/* ===========================
+COMMON SECTION
+=========================== */
 
-.navbar{
+.section{
 
-background:rgba(0,0,0,.35)!important;
+padding:90px 0;
+
+}
+
+.section-title{
+
+font-size:44px;
+
+font-weight:700;
+
+text-align:center;
+
+margin-bottom:55px;
+
+color:#fff;
+
+}
+
+p{
+
+line-height:1.9;
+
+color:#E8ECEF;
+
+font-size:16px;
+
+}
+
+/* ===========================
+GLASS CARD
+=========================== */
+
+.glass{
+
+position:relative;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
 
 backdrop-filter:blur(18px);
 
-box-shadow:0 15px 35px rgba(0,0,0,.30);
+border-radius:24px;
+
+padding:35px;
+
+overflow:hidden;
+
+transition:.45s;
+
+box-shadow:0 20px 40px rgba(0,0,0,.30);
+
+}
+
+.glass:hover{
+
+transform:translateY(-10px);
+
+border-color:#00C8FF;
+
+box-shadow:
+
+0 0 25px rgba(0,200,255,.20),
+
+0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.glass h2,
+.glass h3,
+.glass h4,
+.glass h5{
+
+color:#fff;
+
+font-weight:700;
+
+}
+
+.glass p{
+
+color:#F3F6F8;
+
+}
+
+/* ===========================
+CUSTOM SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0D1F1B;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#00C8FF;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#25D366;
+
+}
+
+::selection{
+
+background:#00C8FF;
+
+color:#fff;
+
+}
+
+/* ===================================
+   PREMIUM NAVBAR
+=================================== */
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:9999;
+
+background:rgba(6,26,23,.75)!important;
+
+backdrop-filter:blur(20px);
+
+-webkit-backdrop-filter:blur(20px);
+
+padding:12px 0;
+
+transition:.4s;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 10px 35px rgba(0,0,0,.25);
 
 }
 
 .navbar-brand{
 
-font-size:32px;
+font-size:30px;
 
 font-weight:800;
+
+color:#fff!important;
+
+letter-spacing:.5px;
 
 }
 
 .nav-link{
 
-font-size:17px;
+color:#f5f5f5!important;
+
+font-size:16px;
 
 font-weight:500;
+
+margin-left:18px;
+
+padding:8px 14px!important;
+
+border-radius:10px;
 
 transition:.35s;
 
 }
 
-.nav-link:hover{
+.nav-link:hover,
+
+.nav-link.active{
+
+background:rgba(0,200,255,.15);
 
 color:#00d4ff!important;
 
 }
 
-/* HERO */
+/* ===================================
+   HERO SECTION
+=================================== */
 
 .hero{
 
-padding-top:150px;
+padding-top:160px;
 
-padding-bottom:90px;
+padding-bottom:100px;
 
 text-align:center;
 
@@ -147,11 +380,15 @@ text-align:center;
 
 .hero h1{
 
-font-size:60px;
+font-size:58px;
 
 font-weight:800;
 
-margin-bottom:20px;
+margin-bottom:22px;
+
+line-height:1.2;
+
+text-shadow:0 8px 30px rgba(0,0,0,.35);
 
 }
 
@@ -165,190 +402,75 @@ font-size:20px;
 
 line-height:1.9;
 
-color:#e8e8e8;
+color:#EDF2F7;
 
 }
 
-/* GLASS */
+/* ===================================
+   BUTTON
+=================================== */
 
-.glass{
+.btn-custom{
 
-background:rgba(255,255,255,.10);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.15);
-
-border-radius:25px;
-
-padding:35px;
-
-box-shadow:0 25px 45px rgba(0,0,0,.35);
-
-transition:.4s;
-
-height:100%;
-
-}
-
-.glass:hover{
-
-transform:translateY(-10px);
-
-}
-
-/* ================= GALLERY CARD ================= */
-
-.media-card{
-
-position:relative;
-
-height:280px;
-
-overflow:hidden;
-
-border-radius:22px;
-
-background:rgba(255,255,255,.06);
-
-backdrop-filter:blur(15px);
-
-border:2px solid rgba(255,255,255,.15);
-
-box-shadow:0 15px 35px rgba(0,0,0,.25);
-
-transition:.45s;
-
-display:flex;
+display:inline-flex;
 
 align-items:center;
 
 justify-content:center;
 
-}
+gap:10px;
 
-/* Hover */
+padding:15px 36px;
 
-.media-card:hover{
+border:none;
 
-transform:translateY(-12px) scale(1.03);
+border-radius:50px;
 
-border-color:#00d4ff;
+font-size:17px;
 
-box-shadow:0 20px 45px rgba(0,212,255,.35);
+font-weight:600;
 
-}
+text-decoration:none;
 
-/* Image & Video */
+color:#fff;
 
-.media-card img,
-.media-card video{
+background:linear-gradient(135deg,#00C8FF,#25D366);
 
-width:100%;
+transition:.4s;
 
-height:100%;
-
-object-fit:cover;
-
-transition:.6s;
-
-display:block;
+box-shadow:0 15px 35px rgba(0,0,0,.25);
 
 }
 
-/* Zoom */
+.btn-custom:hover{
 
-.media-card:hover img,
-.media-card:hover video{
+color:#fff;
 
-transform:scale(1.08);
+transform:translateY(-5px);
 
-}
+box-shadow:
 
-/* Watermark */
+0 0 20px rgba(0,200,255,.35),
 
-.media-card .watermark{
-
-position:absolute;
-
-top:50%;
-
-left:50%;
-
-transform:translate(-50%,-50%) rotate(-35deg);
-
-font-size:34px;
-
-font-weight:800;
-
-letter-spacing:5px;
-
-color:rgba(255,255,255,.05);
-
-pointer-events:none;
-
-user-select:none;
-
-z-index:2;
+0 15px 40px rgba(0,0,0,.35);
 
 }
 
-/* Cross Watermark */
-
-.media-card::before{
-
-content:"";
-
-position:absolute;
-
-width:220%;
-
-height:2px;
-
-background:rgba(255,255,255,.05);
-
-transform:rotate(45deg);
-
-z-index:1;
-
-}
-
-.media-card::after{
-
-content:"";
-
-position:absolute;
-
-width:220%;
-
-height:2px;
-
-background:rgba(255,255,255,.05);
-
-transform:rotate(-45deg);
-
-z-index:1;
-
-}
-
-@media(max-width:768px){
-
-.media-card{
-
-height:220px;
-
-}
-
-}
-/* IMAGE */
+/* ===================================
+   FOUNDER IMAGE
+=================================== */
 
 .image-box{
 
+position:relative;
+
 overflow:hidden;
 
-border-radius:25px;
+border-radius:24px;
 
-box-shadow:0 25px 45px rgba(0,0,0,.40);
+box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+transition:.45s;
 
 height:100%;
 
@@ -374,47 +496,77 @@ transform:scale(1.08);
 
 }
 
-/* SECTION */
+/* Light Sweep */
 
-.section{
+.image-box::before{
 
-padding:80px 0;
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-150%;
+
+width:55%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent);
+
+transform:skewX(-25deg);
+
+transition:.9s;
+
+z-index:5;
 
 }
 
-.section-title{
+.image-box:hover::before{
 
-font-size:42px;
-
-font-weight:700;
-
-margin-bottom:40px;
-
-text-align:center;
+left:170%;
 
 }
 
-/* MOBILE */
+/* Glow */
 
-@media(max-width:768px){
+.image-box:hover{
 
-.hero{
+transform:translateY(-8px);
 
-padding-top:120px;
+box-shadow:
 
-padding-bottom:70px;
+0 0 25px rgba(0,200,255,.30),
+
+0 0 60px rgba(0,200,255,.18),
+
+0 20px 45px rgba(0,0,0,.35);
 
 }
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:992px){
 
 .hero h1{
 
-font-size:38px;
+font-size:44px;
 
 }
 
 .hero p{
 
-font-size:17px;
+font-size:18px;
 
 }
 
@@ -426,83 +578,173 @@ font-size:24px;
 
 }
 
-/* ================= DOCUMENTS ================= */
+@media(max-width:768px){
+
+.hero{
+
+padding-top:135px;
+
+padding-bottom:70px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.nav-link{
+
+margin-left:0;
+
+margin-top:8px;
+
+}
+
+}
+
+/* ===================================
+   DOCUMENTS SECTION
+=================================== */
 
 .doc-card{
 
 position:relative;
 
-height:280px;
+height:360px;
 
 padding:35px 25px;
 
-border-radius:22px;
+background:rgba(20,25,28,.85);
 
-background:rgba(255,255,255,.06);
+backdrop-filter:blur(18px);
 
-backdrop-filter:blur(15px);
+border:2px solid rgba(255,255,255,.08);
 
-border:2px solid rgba(255,255,255,.15);
+border-radius:24px;
 
 overflow:hidden;
 
-transition:.45s;
-
 text-align:center;
 
-box-shadow:0 15px 35px rgba(0,0,0,.25);
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+transition:.45s;
+
+box-shadow:0 15px 40px rgba(0,0,0,.30);
 
 }
 
 .doc-card:hover{
 
-transform:translateY(-12px) scale(1.03);
+transform:translateY(-12px);
 
-border-color:#00d4ff;
+border-color:#00c8ff;
 
-box-shadow:0 20px 45px rgba(0,212,255,.30);
+box-shadow:
+
+0 0 25px rgba(0,200,255,.35),
+
+0 20px 45px rgba(0,0,0,.35);
 
 }
 
+/* ICON */
+
 .doc-icon{
 
-font-size:58px;
+font-size:70px;
+
+color:#00c8ff;
 
 margin-bottom:20px;
 
-color:#00d4ff;
+transition:.45s;
 
-transition:.4s;
+z-index:5;
 
 }
 
 .doc-card:hover .doc-icon{
 
-transform:rotateY(360deg);
+transform:scale(1.15);
 
 color:#25D366;
 
 }
 
-.doc-card h4{
+/* VERIFIED */
+
+.verified{
+
+padding:7px 18px;
+
+border-radius:30px;
+
+background:rgba(37,211,102,.15);
+
+border:1px solid #25D366;
+
+color:#25D366;
+
+font-size:13px;
+
+font-weight:600;
+
+margin-bottom:20px;
+
+z-index:5;
+
+}
+
+.doc-card h3{
+
+color:#fff;
+
+font-size:23px;
 
 font-weight:700;
 
-margin-bottom:15px;
+margin-bottom:12px;
+
+z-index:5;
 
 }
 
 .doc-card p{
 
-font-size:15px;
-
-line-height:1.7;
-
 color:#ddd;
+
+margin-bottom:5px;
+
+z-index:5;
 
 }
 
-/* Watermark */
+.doc-card small{
+
+color:#aaa;
+
+z-index:5;
+
+}
+
+/* WATERMARK */
 
 .watermark{
 
@@ -514,33 +756,31 @@ left:50%;
 
 transform:translate(-50%,-50%) rotate(-35deg);
 
-font-size:34px;
+font-size:40px;
 
 font-weight:800;
 
-letter-spacing:5px;
+letter-spacing:8px;
 
 color:rgba(255,255,255,.05);
 
 white-space:nowrap;
 
+z-index:1;
+
 pointer-events:none;
-
-user-select:none;
-
-text-transform:uppercase;
 
 }
 
-/* Cross Watermark */
+/* CROSS */
 
-.doc-card::after{
+.doc-card::before{
 
 content:"";
 
 position:absolute;
 
-width:220%;
+width:240%;
 
 height:2px;
 
@@ -550,17 +790,17 @@ transform:rotate(45deg);
 
 top:50%;
 
-left:-60%;
+left:-70%;
 
 }
 
-.doc-card::before{
+.doc-card::after{
 
 content:"";
 
 position:absolute;
 
-width:220%;
+width:240%;
 
 height:2px;
 
@@ -570,17 +810,497 @@ transform:rotate(-45deg);
 
 top:50%;
 
-left:-60%;
+left:-70%;
+
+}
+
+/* ===================================
+   GALLERY
+=================================== */
+
+.media-card{
+
+position:relative;
+
+height:320px;
+
+overflow:hidden;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:2px solid rgba(255,255,255,.10);
+
+transition:.45s;
+
+box-shadow:0 20px 45px rgba(0,0,0,.30);
+
+}
+
+.media-card:hover{
+
+transform:translateY(-12px);
+
+border-color:#00d4ff;
+
+box-shadow:
+
+0 0 25px rgba(0,212,255,.30),
+
+0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.media-card img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.7s;
+
+}
+
+.media-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+/* ================= VIDEO ================= */
+
+.video-wrapper{
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:#000;
+
+overflow:hidden;
+
+}
+
+.video-wrapper video{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+/* Watermark */
+
+.media-card .watermark{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%)
+
+rotate(-35deg);
+
+font-size:36px;
+
+font-weight:800;
+
+letter-spacing:8px;
+
+color:rgba(255,255,255,.06);
+
+pointer-events:none;
+
+z-index:3;
+
+}
+
+/* Cross */
+
+.media-card::before{
+
+content:"";
+
+position:absolute;
+
+width:230%;
+
+height:2px;
+
+background:rgba(255,255,255,.05);
+
+transform:rotate(45deg);
+
+top:50%;
+
+left:-70%;
+
+z-index:2;
+
+}
+
+.media-card::after{
+
+content:"";
+
+position:absolute;
+
+width:230%;
+
+height:2px;
+
+background:rgba(255,255,255,.05);
+
+transform:rotate(-45deg);
+
+top:50%;
+
+left:-70%;
+
+z-index:2;
+
+}
+
+@media(max-width:992px){
+
+.media-card{
+
+height:280px;
+
+}
 
 }
 
 @media(max-width:768px){
 
+.media-card{
+
+height:240px;
+
+}
+
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+
+width:100%;
+
+margin-top:100px;
+
+background:#08110f;
+
+padding:70px 0 25px;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+clear:both;
+
+display:block;
+
+}
+
+.footer .container{
+
+max-width:1320px;
+
+margin:auto;
+
+padding:0 15px;
+
+}
+
+.footer h3{
+
+font-size:28px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+color:#fff;
+
+}
+
+.footer p{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#d9d9d9;
+
+}
+
+.footer-links{
+
+padding:0;
+
+margin:0;
+
+list-style:none;
+
+}
+
+.footer-links li{
+
+margin-bottom:12px;
+
+}
+
+.footer-links a{
+
+color:#d9d9d9;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.footer-links a:hover{
+
+color:#00d4ff;
+
+padding-left:8px;
+
+}
+
+.copyright{
+
+text-align:center;
+
+margin-top:20px;
+
+color:#aaa;
+
+}
+
+.social-icons{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.social-icons a{
+
+width:50px;
+
+height:50px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#1b1b1b;
+
+color:#fff;
+
+font-size:22px;
+
+transition:.4s;
+
+}
+
+.social-icons a:hover{
+
+background:#25D366;
+
+transform:translateY(-6px) rotate(360deg);
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+text-align:center;
+
+}
+
+.social-icons{
+
+justify-content:center;
+
+}
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+right:20px;
+
+bottom:25px;
+
+width:65px;
+
+height:65px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:34px;
+
+color:#fff;
+
+text-decoration:none;
+
+z-index:9999;
+
+box-shadow:0 10px 25px rgba(0,0,0,.30);
+
+animation:whatsPulse 2s infinite;
+
+}
+
+@keyframes whatsPulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+#topBtn{
+
+position:fixed;
+
+left:20px;
+
+bottom:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#00b4ff;
+
+color:#fff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.4s;
+
+z-index:9999;
+
+}
+
+#topBtn.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-6px);
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.section{
+
+padding:60px 0;
+
+}
+
+.media-card{
+
+height:230px;
+
+}
+
 .doc-card{
 
 height:auto;
 
-min-height:250px;
+min-height:320px;
+
+}
+
+.footer{
+
+text-align:center;
+
+}
+
+.social-icons{
+
+justify-content:center;
 
 }
 
@@ -592,27 +1312,25 @@ min-height:250px;
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark">
 
 <div class="container">
 
-<a class="navbar-brand"
+<a class="navbar-brand" href="index.html">
 
-href="index.html">
-
-GlobifyTrade International
+🌍 GlobifyTrade International
 
 </a>
 
-<button
+<button class="navbar-toggler"
 
-class="navbar-toggler"
+type="button"
 
 data-bs-toggle="collapse"
 
-data-bs-target="#menu">
+data-bs-target="#navbarNav">
 
 <span class="navbar-toggler-icon"></span>
 
@@ -620,7 +1338,7 @@ data-bs-target="#menu">
 
 <div class="collapse navbar-collapse"
 
-id="menu">
+id="navbarNav">
 
 <ul class="navbar-nav ms-auto">
 
@@ -694,9 +1412,13 @@ Contact
 
 <main>
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
 <div class="container">
+
+<div class="glass">
 
 <h1>
 
@@ -706,81 +1428,99 @@ About GlobifyTrade International
 
 <p>
 
-We are a trusted Indian Export Company committed to delivering premium Agricultural Products, Fresh Fruits, Vegetables, Rice, Spices, FMCG Products and Customized Export Solutions to buyers worldwide.
+GlobifyTrade International is a trusted Indian Export Company committed to supplying premium quality Agricultural Products, Fresh Fruits, Vegetables, Rice, Spices, FMCG Products and Customized Export Solutions to buyers across the world.
 
 </p>
+
+<br>
+
+<a href="products.html"
+
+class="btn btn-custom">
+
+<i class="fa-solid fa-box-open"></i>
+
+Explore Our Products
+
+</a>
+
+</div>
 
 </div>
 
 </section>
 
+<!-- ==========================================
+     FOUNDER SECTION
+========================================== -->
+
+<section class="section">
+
 <div class="container">
 
-<div class="section">
+<div class="row align-items-center g-5">
 
-<div class="row g-5 align-items-center">
-
-<!-- ================= FOUNDER ================= -->
+<!-- Founder Image -->
 
 <div class="col-lg-5">
 
 <div class="image-box">
 
 <img src="founder.jpg"
+
+class="img-fluid"
+
 alt="Founder">
 
 </div>
 
 </div>
 
+<!-- Founder Details -->
+
 <div class="col-lg-7">
 
 <div class="glass">
 
-<h2 class="fw-bold mb-4">
+<span class="badge bg-success px-3 py-2 mb-3">
 
-Founder – Monalisa Prusty
+Founder & Director
+
+</span>
+
+<h2 class="mb-4">
+
+Monalisa Prusty
 
 </h2>
 
 <p>
 
-Monalisa Prusty is a passionate entrepreneur dedicated to
-connecting Indian manufacturers and farmers with buyers
-across the globe through quality products and reliable
-export solutions.
+GlobifyTrade International was established with a vision to connect Indian manufacturers and farmers with buyers across the world.
+
+We specialize in exporting premium quality Agricultural Products, Fresh Fruits, Vegetables, Rice, Spices, FMCG Products and Customized Export Solutions.
 
 </p>
 
 <p>
 
-GlobifyTrade International specializes in exporting
-Fresh Fruits, Vegetables, Rice, Spices,
-FMCG Products, Grocery Items,
-Private Label Products and Customized Export Solutions.
+Our focus is on quality, transparency, timely shipment and long-term business relationships with international buyers.
 
 </p>
 
-<hr class="my-4">
-
-<div class="row g-3">
+<div class="row mt-4 g-3">
 
 <div class="col-md-6">
 
 <div class="glass text-center">
 
-<i class="fa-solid fa-award
-fa-2x text-warning mb-3"></i>
+<i class="fa-solid fa-award fa-2x text-warning mb-3"></i>
 
-<h5>
-
-Premium Quality
-
-</h5>
+<h5>Premium Quality</h5>
 
 <p>
 
-100% Quality Inspection
+100% Export Standard Products
 
 </p>
 
@@ -792,18 +1532,13 @@ Premium Quality
 
 <div class="glass text-center">
 
-<i class="fa-solid fa-truck-fast
-fa-2x text-info mb-3"></i>
+<i class="fa-solid fa-truck-fast fa-2x text-info mb-3"></i>
 
-<h5>
-
-Fast Shipping
-
-</h5>
+<h5>Fast Logistics</h5>
 
 <p>
 
-Worldwide Delivery
+Reliable Worldwide Shipping
 
 </p>
 
@@ -815,18 +1550,13 @@ Worldwide Delivery
 
 <div class="glass text-center">
 
-<i class="fa-solid fa-box
-fa-2x text-success mb-3"></i>
+<i class="fa-solid fa-handshake fa-2x text-success mb-3"></i>
 
-<h5>
-
-Export Packing
-
-</h5>
+<h5>Trusted Partner</h5>
 
 <p>
 
-International Packaging
+Long Term Business Relations
 
 </p>
 
@@ -838,18 +1568,13 @@ International Packaging
 
 <div class="glass text-center">
 
-<i class="fa-solid fa-handshake
-fa-2x text-primary mb-3"></i>
+<i class="fa-solid fa-box-open fa-2x text-primary mb-3"></i>
 
-<h5>
-
-Trusted Partner
-
-</h5>
+<h5>Customized Orders</h5>
 
 <p>
 
-Long Term Business
+Private Label & Bulk Export
 
 </p>
 
@@ -865,11 +1590,13 @@ Long Term Business
 
 </div>
 
-<!-- ================= STATS ================= -->
-
 </div>
 
-</div>
+</section>
+
+<!-- ==========================================
+     COMPANY STATS
+========================================== -->
 
 <section class="section">
 
@@ -895,15 +1622,9 @@ Our Achievements
 
 <h5>
 
-Products
+Export Products
 
 </h5>
-
-<p>
-
-Wide Product Range
-
-</p>
 
 </div>
 
@@ -915,21 +1636,15 @@ Wide Product Range
 
 <h1 class="display-4 fw-bold text-success">
 
-10+
+15+
 
 </h1>
 
 <h5>
 
-Countries
+Countries Served
 
 </h5>
-
-<p>
-
-Global Buyers
-
-</p>
 
 </div>
 
@@ -947,15 +1662,9 @@ Global Buyers
 
 <h5>
 
-Quality
+Quality Focus
 
 </h5>
-
-<p>
-
-Export Standard
-
-</p>
 
 </div>
 
@@ -977,14 +1686,6 @@ Support
 
 </h5>
 
-<p>
-
-Customer Assistance
-
-</p>
-
-</div>
-
 </div>
 
 </div>
@@ -993,11 +1694,11 @@ Customer Assistance
 
 </section>
 
-<!-- ================= DOCUMENTS WE HAVE ================= -->
+<!-- ==========================================
+     DOCUMENTS WE HAVE
+========================================== -->
 
 <section class="section">
-
-<div class="container">
 
 <h2 class="section-title">
 
@@ -1013,33 +1714,59 @@ Documents We Have
 
 <div class="doc-card">
 
-<div class="watermark">CONFIDENTIAL</div>
+<div class="watermark">
+
+CONFIDENTIAL
+
+</div>
 
 <div class="doc-icon">
 
-<i class="fa-solid fa-file-shield"></i>
+<i class="fa-solid fa-file-contract"></i>
 
 </div>
 
-<h4>IEC Certificate</h4>
+<span class="verified">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Verified
+
+</span>
+
+<h3>
+
+IEC Certificate
+
+</h3>
 
 <p>
 
-Importer Exporter Code issued by DGFT Government of India.
+Importer Exporter Code
 
 </p>
 
-</div>
+<small>
+
+Government of India
+
+</small>
 
 </div>
 
-<!-- RCMC -->
+</div>
+
+<!-- APEDA -->
 
 <div class="col-lg-3 col-md-6">
 
 <div class="doc-card">
 
-<div class="watermark">CONFIDENTIAL</div>
+<div class="watermark">
+
+CONFIDENTIAL
+
+</div>
 
 <div class="doc-icon">
 
@@ -1047,13 +1774,31 @@ Importer Exporter Code issued by DGFT Government of India.
 
 </div>
 
-<h4>RCMC APEDA</h4>
+<span class="verified">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Verified
+
+</span>
+
+<h3>
+
+RCMC APEDA
+
+</h3>
 
 <p>
 
-Registered Exporter under APEDA for Agricultural Products.
+Agricultural Export Registration
 
 </p>
+
+<small>
+
+APEDA India
+
+</small>
 
 </div>
 
@@ -1065,7 +1810,11 @@ Registered Exporter under APEDA for Agricultural Products.
 
 <div class="doc-card">
 
-<div class="watermark">CONFIDENTIAL</div>
+<div class="watermark">
+
+CONFIDENTIAL
+
+</div>
 
 <div class="doc-icon">
 
@@ -1073,13 +1822,31 @@ Registered Exporter under APEDA for Agricultural Products.
 
 </div>
 
-<h4>Spices Certificate</h4>
+<span class="verified">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Verified
+
+</span>
+
+<h3>
+
+Spices Board
+
+</h3>
 
 <p>
 
-Export Compliance for Spices & Food Products.
+Export Registration
 
 </p>
+
+<small>
+
+Government of India
+
+</small>
 
 </div>
 
@@ -1091,7 +1858,11 @@ Export Compliance for Spices & Food Products.
 
 <div class="doc-card">
 
-<div class="watermark">CONFIDENTIAL</div>
+<div class="watermark">
+
+CONFIDENTIAL
+
+</div>
 
 <div class="doc-icon">
 
@@ -1099,15 +1870,31 @@ Export Compliance for Spices & Food Products.
 
 </div>
 
-<h4>GST Certificate</h4>
+<span class="verified">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Verified
+
+</span>
+
+<h3>
+
+GST Certificate
+
+</h3>
 
 <p>
 
-Registered under Goods & Services Tax (GST), India.
+Goods & Services Tax
 
 </p>
 
-</div>
+<small>
+
+Government of India
+
+</small>
 
 </div>
 
@@ -1117,11 +1904,11 @@ Registered under Goods & Services Tax (GST), India.
 
 </section>
 
-<!-- ================= GALLERY & VIDEO ================= -->
+<!-- ==========================================
+     GALLERY & EXPORT OPERATIONS
+========================================== -->
 
 <section class="section">
-
-<div class="container">
 
 <h2 class="section-title">
 
@@ -1129,47 +1916,70 @@ Gallery & Export Operations
 
 </h2>
 
-<div class="row g-4 align-items-stretch">
+<div class="row g-4">
 
-<!-- IMAGE 1 -->
-
-<div class="col-lg-4 col-md-6">
+<div class="col-lg-4">
 
 <div class="media-card">
+
+<div class="watermark">
+
+GlobifyTrade
+
+</div>
 
 <img src="export1.jpg"
+
 alt="Export Image">
 
 </div>
 
 </div>
 
-<!-- IMAGE 2 -->
-
-<div class="col-lg-4 col-md-6">
+<div class="col-lg-4">
 
 <div class="media-card">
+
+<div class="watermark">
+
+GlobifyTrade
+
+</div>
 
 <img src="export2.jpg"
+
 alt="Export Image">
 
 </div>
 
 </div>
 
-<!-- VIDEO -->
-
-<div class="col-lg-4 col-md-12">
+<div class="col-lg-4">
 
 <div class="media-card">
 
+<div class="watermark">
+
+GlobifyTrade
+
+</div>
+
+<div class="video-wrapper">
+
 <video
+
 controls
+
 playsinline
+
 preload="metadata"
+
 poster="video-thumbnail.jpg">
 
-<source src="green_chilli.mp4"
+<source
+
+src="green_chilli.mp4"
+
 type="video/mp4">
 
 </video>
@@ -1184,19 +1994,19 @@ type="video/mp4">
 
 </section>
 
-<!-- ================= MISSION & VISION ================= -->
+<!-- ==========================================
+     MISSION & VISION
+========================================== -->
 
 <section class="section">
 
-<div class="container">
-
-<div class="row g-4">
+<div class="row">
 
 <div class="col-lg-6">
 
 <div class="glass">
 
-<h2 class="mb-4">
+<h2>
 
 Our Mission
 
@@ -1204,7 +2014,7 @@ Our Mission
 
 <p>
 
-To connect Indian manufacturers and farmers with buyers across the globe by delivering premium quality export products with reliable logistics, competitive pricing and long-term business relationships.
+To connect Indian manufacturers with global buyers through quality products, transparent business practices and reliable export services.
 
 </p>
 
@@ -1216,7 +2026,7 @@ To connect Indian manufacturers and farmers with buyers across the globe by deli
 
 <div class="glass">
 
-<h2 class="mb-4">
+<h2>
 
 Our Vision
 
@@ -1224,7 +2034,7 @@ Our Vision
 
 <p>
 
-To become one of India's most trusted export companies by providing world-class products, ethical business practices and customer-focused export solutions.
+To become one of India's most trusted export companies delivering value, quality and long-term international partnerships.
 
 </p>
 
@@ -1234,17 +2044,53 @@ To become one of India's most trusted export companies by providing world-class 
 
 </div>
 
+</section>
+
+<!-- ==========================================
+     CTA
+========================================== -->
+
+<section class="section">
+
+<div class="glass text-center">
+
+<h2 class="mb-4">
+
+Ready to Export with Us?
+
+</h2>
+
+<p>
+
+Explore our export products and connect with our team today.
+
+</p>
+
+<br>
+
+<a
+
+href="products.html"
+
+class="btn btn-custom">
+
+Explore Products
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
 </div>
 
 </section>
 
-<!-- ================= WHY CHOOSE US ================= -->
+<!-- ==========================================
+     WHY CHOOSE US
+========================================== -->
 
 <section class="section">
 
 <div class="container">
-
-<div class="glass">
 
 <h2 class="section-title">
 
@@ -1252,92 +2098,79 @@ Why Choose GlobifyTrade?
 
 </h2>
 
-<div class="row text-center g-4">
+<div class="row g-4">
 
 <div class="col-lg-3 col-md-6">
-
-<i class="fa-solid fa-certificate fa-3x text-warning mb-3"></i>
-
-<h5>
-
-Certified Suppliers
-
-</h5>
-
-</div>
-
-<div class="col-lg-3 col-md-6">
-
-<i class="fa-solid fa-globe fa-3x text-info mb-3"></i>
-
-<h5>
-
-Worldwide Network
-
-</h5>
-
-</div>
-
-<div class="col-lg-3 col-md-6">
-
-<i class="fa-solid fa-ship fa-3x text-success mb-3"></i>
-
-<h5>
-
-Reliable Logistics
-
-</h5>
-
-</div>
-
-<div class="col-lg-3 col-md-6">
-
-<i class="fa-solid fa-users fa-3x text-primary mb-3"></i>
-
-<h5>
-
-Trusted Partnership
-
-</h5>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= CTA ================= -->
-
-<section class="section">
-
-<div class="container">
 
 <div class="glass text-center">
 
-<h2 class="display-6 fw-bold">
+<i class="fa-solid fa-medal fa-3x text-warning mb-3"></i>
 
-Ready To Start Export Business?
+<h4>Premium Quality</h4>
 
-</h2>
+<p>
 
-<p class="mt-3 mb-4">
-
-Explore our premium export products and send your enquiry today.
+Strict quality inspection before export.
 
 </p>
 
-<a href="products.html"
-class="btn btn-custom btn-lg px-5">
+</div>
 
-Explore Products
+</div>
 
-<i class="fa-solid fa-arrow-right ms-2"></i>
+<div class="col-lg-3 col-md-6">
 
-</a>
+<div class="glass text-center">
+
+<i class="fa-solid fa-globe fa-3x text-info mb-3"></i>
+
+<h4>Global Network</h4>
+
+<p>
+
+Serving buyers across multiple countries.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="glass text-center">
+
+<i class="fa-solid fa-ship fa-3x text-success mb-3"></i>
+
+<h4>Reliable Logistics</h4>
+
+<p>
+
+Safe and timely international shipments.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="glass text-center">
+
+<i class="fa-solid fa-handshake fa-3x text-primary mb-3"></i>
+
+<h4>Trusted Partner</h4>
+
+<p>
+
+Long-term business relationships.
+
+</p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1345,49 +2178,42 @@ Explore Products
 
 </section>
 
-<!-- ================= PREMIUM FOOTER ================= -->
+</main>
+
+<!-- ================= FOOTER ================= -->
 
 <footer class="footer">
 
 <div class="container">
 
-<div class="row gy-5">
+<div class="row gy-4">
 
 <div class="col-lg-4">
 
-<h3 class="mb-4">
-
-🌍 GlobifyTrade International
-
-</h3>
+<h3>🌍 GlobifyTrade International</h3>
 
 <p>
 
-Connecting India to Global Markets with Premium
-Agricultural Products, Fresh Fruits, Vegetables,
-Rice, Spices, FMCG Products and Customized
-Export Solutions.
+Trusted Indian Export Company delivering Agricultural Products,
+Fresh Fruits, Vegetables, Rice, Spices, FMCG Products and Customized Export Solutions worldwide.
 
 </p>
 
-<div class="social-icons mt-4">
+<div class="social-icons">
 
-<a href="https://wa.me/918668652404"
-target="_blank">
+<a href="https://wa.me/918668652404" target="_blank">
 
 <i class="fab fa-whatsapp"></i>
 
 </a>
 
-<a href="https://www.instagram.com/globifytrade/"
-target="_blank">
+<a href="https://instagram.com/globifytrade" target="_blank">
 
 <i class="fab fa-instagram"></i>
 
 </a>
 
-<a href="https://www.linkedin.com/in/rahul-pawar-1870353a1/"
-target="_blank">
+<a href="https://linkedin.com/company/globifytrade" target="_blank">
 
 <i class="fab fa-linkedin"></i>
 
@@ -1399,11 +2225,7 @@ target="_blank">
 
 <div class="col-lg-4">
 
-<h3 class="mb-4">
-
-Quick Links
-
-</h3>
+<h3>Quick Links</h3>
 
 <ul class="footer-links">
 
@@ -1423,43 +2245,13 @@ Quick Links
 
 <div class="col-lg-4">
 
-<h3 class="mb-4">
+<h3>Contact</h3>
 
-Contact
+<p><i class="fa-solid fa-phone"></i> +91 8668652404</p>
 
-</h3>
+<p><i class="fa-solid fa-envelope"></i> info@globifytrade.com</p>
 
-<p>
-
-<i class="fa-solid fa-phone"></i>
-
-+91 8668652404
-
-</p>
-
-<p>
-
-<i class="fa-solid fa-envelope"></i>
-
-info@globifytrade.com
-
-</p>
-
-<p>
-
-<i class="fa-solid fa-location-dot"></i>
-
-Pune, Maharashtra, India
-
-</p>
-
-<p>
-
-<i class="fa-solid fa-globe"></i>
-
-www.globifytrade.com
-
-</p>
+<p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India</p>
 
 </div>
 
@@ -1467,17 +2259,9 @@ www.globifytrade.com
 
 <hr>
 
-<div class="text-center">
+<div class="copyright">
 
-© 2025
-
-<strong>
-
-GlobifyTrade International
-
-</strong>
-
-All Rights Reserved.
+© 2025 <strong>GlobifyTrade International</strong>. All Rights Reserved.
 
 </div>
 
@@ -1485,11 +2269,9 @@ All Rights Reserved.
 
 </footer>
 
-<!-- ================= WHATSAPP ================= -->
-
 <a
 
-href="https://wa.me/918668652404?text=Hello%20GlobifyTrade"
+href="https://wa.me/918668652404"
 
 class="whatsapp"
 
@@ -1499,13 +2281,13 @@ target="_blank">
 
 </a>
 
-<!-- ================= TOP BUTTON ================= -->
-
 <button id="topBtn">
 
 <i class="fa-solid fa-arrow-up"></i>
 
 </button>
+
+</main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -1540,294 +2322,6 @@ behavior:"smooth"
 }
 
 </script>
-
-<style>
-
-/************ FOOTER ************/
-
-.footer{
-
-margin-top:120px;
-
-padding:80px 0 30px;
-
-background:linear-gradient(
-
-135deg,
-
-rgba(5,5,5,.96),
-
-rgba(20,20,20,.98),
-
-rgba(5,5,5,1));
-
-border-top:1px solid rgba(255,255,255,.12);
-
-}
-
-.footer h3{
-
-font-weight:700;
-
-margin-bottom:20px;
-
-}
-
-.footer p{
-
-line-height:1.9;
-
-color:#d8d8d8;
-
-}
-
-.footer-links{
-
-list-style:none;
-
-padding:0;
-
-}
-
-.footer-links li{
-
-margin-bottom:12px;
-
-}
-
-.footer-links a{
-
-text-decoration:none;
-
-color:#d8d8d8;
-
-transition:.35s;
-
-}
-
-.footer-links a:hover{
-
-color:#00d4ff;
-
-padding-left:8px;
-
-}
-
-.footer hr{
-
-border-color:#444;
-
-margin:40px 0;
-
-}
-
-/************ SOCIAL ************/
-
-.social-icons{
-
-display:flex;
-
-gap:14px;
-
-}
-
-.social-icons a{
-
-width:50px;
-
-height:50px;
-
-border-radius:50%;
-
-background:#1c1c1c;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:22px;
-
-color:#fff;
-
-transition:.4s;
-
-}
-
-.social-icons a:hover{
-
-background:#25D366;
-
-transform:translateY(-8px) rotate(360deg);
-
-}
-
-/************ WHATSAPP ************/
-
-.whatsapp{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:68px;
-
-height:68px;
-
-border-radius:50%;
-
-background:#25D366;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:34px;
-
-color:#fff;
-
-text-decoration:none;
-
-z-index:9999;
-
-animation:whatsappPulse 2s infinite;
-
-box-shadow:0 15px 35px rgba(0,0,0,.35);
-
-}
-
-@keyframes whatsappPulse{
-
-0%{
-
-transform:scale(1);
-
-box-shadow:0 0 0 0 rgba(37,211,102,.6);
-
-}
-
-50%{
-
-transform:scale(1.12);
-
-box-shadow:0 0 0 18px rgba(37,211,102,0);
-
-}
-
-100%{
-
-transform:scale(1);
-
-box-shadow:0 0 0 0 rgba(37,211,102,0);
-
-}
-
-}
-
-/************ TOP BUTTON ************/
-
-#topBtn{
-
-position:fixed;
-
-left:25px;
-
-bottom:25px;
-
-width:58px;
-
-height:58px;
-
-border:none;
-
-border-radius:50%;
-
-background:#00b4ff;
-
-color:#fff;
-
-font-size:22px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-cursor:pointer;
-
-opacity:0;
-
-visibility:hidden;
-
-transition:.35s;
-
-box-shadow:0 15px 35px rgba(0,0,0,.35);
-
-}
-
-#topBtn.show{
-
-opacity:1;
-
-visibility:visible;
-
-}
-
-#topBtn:hover{
-
-transform:translateY(-6px);
-
-}
-
-/************ MOBILE ************/
-
-@media(max-width:768px){
-
-.footer{
-
-text-align:center;
-
-}
-
-.social-icons{
-
-justify-content:center;
-
-}
-
-.whatsapp{
-
-width:60px;
-
-height:60px;
-
-font-size:30px;
-
-}
-
-#topBtn{
-
-width:52px;
-
-height:52px;
-
-left:18px;
-
-bottom:18px;
-
-}
-
-}
-
-</style>
-
-</main>
 
 </body>
 
