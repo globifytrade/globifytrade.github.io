@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://globifytrade.github.io/sitemap.xml
+Sitemap: https://www.globifytrade.com/sitemap.xml
