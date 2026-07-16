@@ -1,108 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOME PAGE -->
   <url>
-    <loc>https://globifytrade.github.io/</loc>
-  </url>
-
-  <!-- MAIN PAGES -->
-  <url>
-    <loc>https://globifytrade.github.io/about.html</loc>
+    <loc>https://www.globifytrade.com/</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/products.html</loc>
+    <loc>https://www.globifytrade.com/about.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/contact.html</loc>
+    <loc>https://www.globifytrade.com/products.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/enquiry.html</loc>
-  </url>
-
-  <!-- PRODUCT PAGES -->
-  <url>
-    <loc>https://globifytrade.github.io/rice.html</loc>
+    <loc>https://www.globifytrade.com/contact.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/onions.html</loc>
+    <loc>https://www.globifytrade.com/enquiry.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/vegetables.html</loc>
+    <loc>https://www.globifytrade.com/rice.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/green-chilli.html</loc>
+    <loc>https://www.globifytrade.com/onions.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/garlic.html</loc>
+    <loc>https://www.globifytrade.com/vegetables.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/indian-spices.html</loc>
+    <loc>https://www.globifytrade.com/green-chilli.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/moringa-powder.html</loc>
+    <loc>https://www.globifytrade.com/garlic.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/fresh-coconut.html</loc>
+    <loc>https://www.globifytrade.com/indian-spices.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/fresh-jaggery.html</loc>
+    <loc>https://www.globifytrade.com/moringa-powder.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/ganesh-statue.html</loc>
+    <loc>https://www.globifytrade.com/fresh-coconut.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/lemons.html</loc>
+    <loc>https://www.globifytrade.com/fresh-jaggery.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/makhana.html</loc>
+    <loc>https://www.globifytrade.com/ganesh-statue.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/fresh-tomato.html</loc>
+    <loc>https://www.globifytrade.com/lemons.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/watermelon.html</loc>
+    <loc>https://www.globifytrade.com/makhana.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/fresh-ginger.html</loc>
+    <loc>https://www.globifytrade.com/fresh-tomato.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/pomegranate.html</loc>
+    <loc>https://www.globifytrade.com/watermelon.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/mrx-aqua.html</loc>
-  </url>
-
-  <!-- BLOG PAGES -->
-  <url>
-    <loc>https://globifytrade.github.io/blog/</loc>
+    <loc>https://www.globifytrade.com/fresh-ginger.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/blog/onion-export.html</loc>
+    <loc>https://www.globifytrade.com/pomegranate.html</loc>
   </url>
 
   <url>
-    <loc>https://globifytrade.github.io/blog/rice-export.html</loc>
+    <loc>https://www.globifytrade.com/mrx-aqua.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.globifytrade.com/blog/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.globifytrade.com/blog/onion-export.html</loc>
+  </url>
+
+  <url>
+    <loc>https://www.globifytrade.com/blog/rice-export.html</loc>
   </url>
 
 </urlset>
