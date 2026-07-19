@@ -512,7 +512,7 @@ height:100%;
 
 .product-card img{
 height:260px;
-width:100%;
+width:auto;
 object-fit:cover;
 transition:.5s;
 }
